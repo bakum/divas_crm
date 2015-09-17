@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.23.11" id="DivasService" Package="ua.divas.app"
+          BeanClass="ua.divas.app.DivasService" isJavaBased="false">
+  <AccessorAttribute id="findOperationRkoView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOperationRkoView1"/>
+  <AccessorAttribute id="deleteOrdersTpOplatyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.deleteOrdersTpOplatyView1"/>
+  <AccessorAttribute id="createRkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.createRkoView1"/>
+  <AccessorAttribute id="findKassaSettingsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findKassaSettingsView1"/>
+  <AccessorAttribute id="updateKontragentsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.updateKontragentsView1"/>
+  <AccessorAttribute id="findCurrencyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findCurrencyView1"/>
+  <AccessorAttribute id="mergeRkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.mergeRkoView1"/>
+  <AccessorAttribute id="deletePkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.deletePkoView1"/>
+  <AccessorAttribute id="findPkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.findPkoView1"/>
+  <AccessorAttribute id="updateRkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.updateRkoView1"/>
+  <AccessorAttribute id="deleteRkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.deleteRkoView1"/>
+  <AccessorAttribute id="findOrdersTpOplatyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrdersTpOplatyView1"/>
+  <AccessorAttribute id="createPkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.createPkoView1"/>
+  <AccessorAttribute id="findNomenklaturaView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findNomenklaturaView1"/>
+  <AccessorAttribute id="createOrdersView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.createOrdersView1"/>
+  <AccessorAttribute id="updatePkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.updatePkoView1"/>
+  <AccessorAttribute id="findOperationPkoView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOperationPkoView1"/>
+  <AccessorAttribute id="findOrdersView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrdersView1"/>
+  <AccessorAttribute id="findMeasureUnitView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findMeasureUnitView1"/>
+  <AccessorAttribute id="createOrdersTpOplatyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.createOrdersTpOplatyView1"/>
+  <AccessorAttribute id="findGroupmembersView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findGroupmembersView1"/>
+  <AccessorAttribute id="findDivisionSotrView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findDivisionSotrView1"/>
+  <AccessorAttribute id="updateOrdersTpUslugiView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.updateOrdersTpUslugiView1"/>
+  <AccessorAttribute id="mergePkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.mergePkoView1"/>
+  <AccessorAttribute id="findContactDetailsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findContactDetailsView1"/>
+  <AccessorAttribute id="findOrderStatusView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrderStatusView1"/>
+  <AccessorAttribute id="findKontragentsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findKontragentsView1"/>
+  <AccessorAttribute id="createOrdersTpUslugiView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.createOrdersTpUslugiView1"/>
+  <AccessorAttribute id="mergeOrdersTpOplatyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.mergeOrdersTpOplatyView1"/>
+  <AccessorAttribute id="findUsersView1_parameters" IsCollection="false" BeanClass="DivasService.Types.findUsersView1"/>
+  <AccessorAttribute id="findLastPricesView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findLastPricesView1"/>
+  <AccessorAttribute id="findOrdersTpUslugiView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrdersTpUslugiView1"/>
+  <AccessorAttribute id="findDivisionsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findDivisionsView1"/>
+  <AccessorAttribute id="findNomGroup1_parameters" IsCollection="false" BeanClass="DivasService.Types.findNomGroup1"/>
+  <AccessorAttribute id="updateContactDetailsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.updateContactDetailsView1"/>
+  <AccessorAttribute id="findUserSettingsView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.findUserSettingsView1"/>
+  <AccessorAttribute id="findKassaView1_parameters" IsCollection="false" BeanClass="DivasService.Types.findKassaView1"/>
+  <AccessorAttribute id="mergeOrdersTpUslugiView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.mergeOrdersTpUslugiView1"/>
+  <AccessorAttribute id="updateOrdersView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.updateOrdersView1"/>
+  <AccessorAttribute id="updateOrdersTpOplatyView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.updateOrdersTpOplatyView1"/>
+  <AccessorAttribute id="mergeOrdersView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.mergeOrdersView1"/>
+  <AccessorAttribute id="deleteOrdersTpUslugiView1_parameters" IsCollection="false"
+                     BeanClass="DivasService.Types.deleteOrdersTpUslugiView1"/>
+  <AccessorAttribute id="findFirmsView1_parameters" IsCollection="false" BeanClass="DivasService.Types.findFirmsView1"/>
+  <AccessorAttribute id="findRkoView1_parameters" IsCollection="false" BeanClass="DivasService.Types.findRkoView1"/>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOperationRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOperationRkoView1.result" id="findOperationRkoView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOperationRkoView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor id="deleteOrdersTpOplatyView1">
+    <ParameterInfo id="ordersTpOplatyView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.createRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.createRkoView1.result" id="createRkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="rkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findKassaSettingsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findKassaSettingsView1.result" id="findKassaSettingsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findKassaSettingsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOrdersTpOplatyView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOrdersTpOplatyView1.result" id="getOrdersTpOplatyView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateKontragentsView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateKontragentsView1.result" id="updateKontragentsView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="kontragentsView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findCurrencyView1.result"
+                  BeanClass="ua.divas.app.DivasService.findCurrencyView1.result" id="findCurrencyView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findCurrencyView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getContactDetailsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getContactDetailsView1.result" id="getContactDetailsView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOrdersView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOrdersView1.result" id="getOrdersView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getKontragentsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getKontragentsView1.result" id="getKontragentsView1"
+                  ReturnNodeName="result"/>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.mergeRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.mergeRkoView1.result" id="mergeRkoView1" ReturnNodeName="result">
+    <ParameterInfo id="rkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor id="deletePkoView1">
+    <ParameterInfo id="pkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findPkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.findPkoView1.result" id="findPkoView1" ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findPkoView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getDivisionSotrView1.result"
+                  BeanClass="ua.divas.app.DivasService.getDivisionSotrView1.result" id="getDivisionSotrView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getFirmsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getFirmsView1.result" id="getFirmsView1" ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateRkoView1.result" id="updateRkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="rkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor id="deleteRkoView1">
+    <ParameterInfo id="rkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getKassaSettingsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getKassaSettingsView1.result" id="getKassaSettingsView1"
+                  ReturnNodeName="result"/>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOrdersTpOplatyView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOrdersTpOplatyView1.result" id="findOrdersTpOplatyView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOrdersTpOplatyView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.createPkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.createPkoView1.result" id="createPkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="pkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findNomenklaturaView1.result"
+                  BeanClass="ua.divas.app.DivasService.findNomenklaturaView1.result" id="findNomenklaturaView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findNomenklaturaView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.createOrdersView1.result"
+                  BeanClass="ua.divas.app.DivasService.createOrdersView1.result" id="createOrdersView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updatePkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.updatePkoView1.result" id="updatePkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="pkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOperationPkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOperationPkoView1.result" id="findOperationPkoView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOperationPkoView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOrdersView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOrdersView1.result" id="findOrdersView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOrdersView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getDivisionsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getDivisionsView1.result" id="getDivisionsView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findMeasureUnitView1.result"
+                  BeanClass="ua.divas.app.DivasService.findMeasureUnitView1.result" id="findMeasureUnitView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findMeasureUnitView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.createOrdersTpOplatyView1.result"
+                  BeanClass="ua.divas.app.DivasService.createOrdersTpOplatyView1.result" id="createOrdersTpOplatyView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpOplatyView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findGroupmembersView1.result"
+                  BeanClass="ua.divas.app.DivasService.findGroupmembersView1.result" id="findGroupmembersView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findGroupmembersView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findDivisionSotrView1.result"
+                  BeanClass="ua.divas.app.DivasService.findDivisionSotrView1.result" id="findDivisionSotrView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findDivisionSotrView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateOrdersTpUslugiView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateOrdersTpUslugiView1.result" id="updateOrdersTpUslugiView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpUslugiView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.mergePkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.mergePkoView1.result" id="mergePkoView1" ReturnNodeName="result">
+    <ParameterInfo id="pkoView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findContactDetailsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findContactDetailsView1.result" id="findContactDetailsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findContactDetailsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.getRkoView1.result" id="getRkoView1" ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOrderStatusView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOrderStatusView1.result" id="findOrderStatusView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOrderStatusView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findKontragentsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findKontragentsView1.result" id="findKontragentsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findKontragentsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getMeasureUnitView1.result"
+                  BeanClass="ua.divas.app.DivasService.getMeasureUnitView1.result" id="getMeasureUnitView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.createOrdersTpUslugiView1.result"
+                  BeanClass="ua.divas.app.DivasService.createOrdersTpUslugiView1.result" id="createOrdersTpUslugiView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpUslugiView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.mergeOrdersTpOplatyView1.result"
+                  BeanClass="ua.divas.app.DivasService.mergeOrdersTpOplatyView1.result" id="mergeOrdersTpOplatyView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpOplatyView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findUsersView1.result"
+                  BeanClass="ua.divas.app.DivasService.findUsersView1.result" id="findUsersView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findUsersView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getUserSettingsView1.result"
+                  BeanClass="ua.divas.app.DivasService.getUserSettingsView1.result" id="getUserSettingsView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getUsersView1.result"
+                  BeanClass="ua.divas.app.DivasService.getUsersView1.result" id="getUsersView1"
+                  ReturnNodeName="result"/>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOperationRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOperationRkoView1.result" id="getOperationRkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findLastPricesView1.result"
+                  BeanClass="ua.divas.app.DivasService.findLastPricesView1.result" id="findLastPricesView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findLastPricesView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findOrdersTpUslugiView1.result"
+                  BeanClass="ua.divas.app.DivasService.findOrdersTpUslugiView1.result" id="findOrdersTpUslugiView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findOrdersTpUslugiView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findDivisionsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findDivisionsView1.result" id="findDivisionsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findDivisionsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findNomGroup1.result"
+                  BeanClass="ua.divas.app.DivasService.findNomGroup1.result" id="findNomGroup1" ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findNomGroup1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateContactDetailsView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateContactDetailsView1.result" id="updateContactDetailsView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="contactDetailsView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findUserSettingsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findUserSettingsView1.result" id="findUserSettingsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findUserSettingsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findKassaView1.result"
+                  BeanClass="ua.divas.app.DivasService.findKassaView1.result" id="findKassaView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findKassaView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.mergeOrdersTpUslugiView1.result"
+                  BeanClass="ua.divas.app.DivasService.mergeOrdersTpUslugiView1.result" id="mergeOrdersTpUslugiView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpUslugiView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateOrdersView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateOrdersView1.result" id="updateOrdersView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOrderStatusView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOrderStatusView1.result" id="getOrderStatusView1"
+                  ReturnNodeName="result"/>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOrdersTpUslugiView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOrdersTpUslugiView1.result" id="getOrdersTpUslugiView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.updateOrdersTpOplatyView1.result"
+                  BeanClass="ua.divas.app.DivasService.updateOrdersTpOplatyView1.result" id="updateOrdersTpOplatyView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersTpOplatyView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getOperationPkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.getOperationPkoView1.result" id="getOperationPkoView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getCurrencyView1.result"
+                  BeanClass="ua.divas.app.DivasService.getCurrencyView1.result" id="getCurrencyView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getPkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.getPkoView1.result" id="getPkoView1" ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.mergeOrdersView1.result"
+                  BeanClass="ua.divas.app.DivasService.mergeOrdersView1.result" id="mergeOrdersView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="ordersView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getKassaView1.result"
+                  BeanClass="ua.divas.app.DivasService.getKassaView1.result" id="getKassaView1" ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+  <MethodAccessor id="deleteOrdersTpUslugiView1">
+    <ParameterInfo id="ordersTpUslugiView1" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findFirmsView1.result"
+                  BeanClass="ua.divas.app.DivasService.findFirmsView1.result" id="findFirmsView1"
+                  ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findFirmsView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="true" Type="ua.divas.app.DivasService.findRkoView1.result"
+                  BeanClass="ua.divas.app.DivasService.findRkoView1.result" id="findRkoView1" ReturnNodeName="result"
+                  CollectionBeanClass="ua.divas.app.DivasService.findRkoView1.result_Operations">
+    <ParameterInfo id="findCriteria" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+    <ParameterInfo id="findControl" Type="java.lang.Object" isStructured="false">
+      <Properties>
+        <Property Name="__SET_INITIAL_VALUE" Value="true"/>
+        <Property Name="__alternate_param_type__" Value="java.util.Map"/>
+      </Properties>
+    </ParameterInfo>
+  </MethodAccessor>
+  <MethodAccessor IsCollection="false" Type="ua.divas.app.DivasService.getLastPricesView1.result"
+                  BeanClass="ua.divas.app.DivasService.getLastPricesView1.result" id="getLastPricesView1"
+                  ReturnNodeName="result">
+    <ParameterInfo id="id" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

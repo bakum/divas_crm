@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobileObjectPersistence xmlns="http://www.oracle.com/ateam/mobile/persistenceMapping" logWebServiceCalls="true">
+   <classMappingDescriptor className="ua.divas.mobile.model.Oplaty" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.OplatyService" autoIncrementPrimaryKey="false" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="OPLATY">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="orderId" payloadAttributeName="OrderId" columnName="ORDER_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="dat" payloadAttributeName="Dat" columnName="DAT" columnDataType="DATE" required="true" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="sum1" payloadAttributeName="Sum1" columnName="SUM1" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="userId" payloadAttributeName="UserId" columnName="USER_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="comments" payloadAttributeName="Comments" columnName="COMMENTS" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerId" payloadAttributeName="ZamerId" columnName="ZAMER_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kassaId" payloadAttributeName="KassaId" columnName="KASSA_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findOrdersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Uslugi" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.UslugiService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="USLUGI">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="orderId" payloadAttributeName="OrderId" columnName="ORDER_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="nomId" payloadAttributeName="NomId" columnName="NOM_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="price" payloadAttributeName="Price" columnName="PRICE" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="summ" payloadAttributeName="Summ" columnName="SUMM" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="datComplete" payloadAttributeName="DatComplete" columnName="DAT_COMPLETE" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="sotrId" payloadAttributeName="SotrId" columnName="SOTR_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="datToPay" payloadAttributeName="DatToPay" columnName="DAT_TO_PAY" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="groupId" payloadAttributeName="GroupId" columnName="GROUP_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="measureId" payloadAttributeName="MeasureId" columnName="MEASURE_ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="quantity" payloadAttributeName="Quantity" columnName="QUANTITY" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="addWork" payloadAttributeName="AddWork" columnName="ADD_WORK" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="priceAdd" payloadAttributeName="PriceAdd" columnName="PRICE_ADD" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findOrdersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Contact" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.ContactService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="CONTACT">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="version" payloadAttributeName="Version" columnName="VERSION" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="kontragId" payloadAttributeName="KontragId" columnName="KONTRAG_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="adress" payloadAttributeName="Adress" columnName="ADRESS" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="phone" payloadAttributeName="Phone" columnName="PHONE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="email" payloadAttributeName="Email" columnName="EMAIL" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findKontragentsView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.KassaSettings" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.KassaSettingsService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="KASSA_SETTINGS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="userId" payloadAttributeName="UserId" columnName="USER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kassaId" payloadAttributeName="KassaId" columnName="KASSA_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kassaName" payloadAttributeName="KassaName" columnName="KASSA_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findUsersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Nomenklatura" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.NomenklaturaService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="NOMENKLATURA">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isGroup" payloadAttributeName="IsGroup" columnName="IS_GROUP" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="parentId" payloadAttributeName="ParentId" columnName="PARENT_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="parentname" payloadAttributeName="Parentname" columnName="PARENTNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="usluga" payloadAttributeName="Usluga" columnName="USLUGA" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="predefined" payloadAttributeName="Predefined" columnName="PREDEFINED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="version" payloadAttributeName="Version" columnName="VERSION" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="artikul" payloadAttributeName="Artikul" columnName="ARTIKUL" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findNomenklaturaView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Orders" persisted="true" orderBy="DAT DESC">
+      <crudServiceClass className="ua.divas.mobile.model.service.OrdersService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="ORDERS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="dat" payloadAttributeName="Dat" columnName="DAT" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="num" payloadAttributeName="Num" columnName="NUM" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kontragId" payloadAttributeName="KontragId" columnName="KONTRAG_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kontragName" payloadAttributeName="KontragName" columnName="KONTRAG_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="currId" payloadAttributeName="CurrId" columnName="CURR_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kassaId" payloadAttributeName="KassaId" columnName="KASSA_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="divisionId" payloadAttributeName="DivisionId" columnName="DIVISION_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="divisionName" payloadAttributeName="DivisionName" columnName="DIVISION_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="userId" payloadAttributeName="UserId" columnName="USER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="userName" payloadAttributeName="UserName" columnName="USER_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kurs" payloadAttributeName="Kurs" columnName="KURS" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="kratnost" payloadAttributeName="Kratnost" columnName="KRATNOST" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Long" keyAttribute="false"/>
+         <directMapping attributeName="discription" payloadAttributeName="Discription" columnName="DISCRIPTION" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="version" payloadAttributeName="Version" columnName="VERSION" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="posted" payloadAttributeName="Posted" columnName="POSTED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="firmId" payloadAttributeName="FirmId" columnName="FIRM_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="activitiesId" payloadAttributeName="ActivitiesId" columnName="ACTIVITIES_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="statusId" payloadAttributeName="StatusId" columnName="STATUS_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="statusName" payloadAttributeName="StatusName" columnName="STATUS_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerId" payloadAttributeName="ZamerId" columnName="ZAMER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerName" payloadAttributeName="ZamerName" columnName="ZAMER_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerUserName" payloadAttributeName="ZamerUserName" columnName="ZAMER_USER_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerUserId" payloadAttributeName="ZamerUserId" columnName="ZAMER_USER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="datZam" payloadAttributeName="DatZam" columnName="DAT_ZAM" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="summPlan" payloadAttributeName="SummPlan" columnName="SUMM_PLAN" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="datComplete" payloadAttributeName="DatComplete" columnName="DAT_COMPLETE" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="agentId" payloadAttributeName="AgentId" columnName="AGENT_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="datCompleteFact" payloadAttributeName="DatCompleteFact" columnName="DAT_COMPLETE_FACT" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="divisionDest" payloadAttributeName="DivisionDest" columnName="DIVISION_DEST" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <oneToManyMapping attributeName="oplaty" payloadAttributeName="OrdersTpOplatyView" referenceClassName="ua.divas.mobile.model.Oplaty" sendAsArrayIfOnlyOneEntry="true">
+            <foreignKeyColumnReference sourceTable="OPLATY" sourceColumn="ORDER_ID" targetTable="ORDERS" targetColumn="ID"/>
+         </oneToManyMapping>
+         <oneToManyMapping attributeName="uslugi" payloadAttributeName="OrdersTpUslugiView" referenceClassName="ua.divas.mobile.model.Uslugi" sendAsArrayIfOnlyOneEntry="true">
+            <foreignKeyColumnReference sourceTable="USLUGI" sourceColumn="ORDER_ID" targetTable="ORDERS" targetColumn="ID"/>
+         </oneToManyMapping>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findOrdersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+         <createMethod name="createOrdersView1" dataControlName="DivasService" secured="false" payloadElementName="result">
+            <parameter name="ordersView1" valueProvider="SerializedDataObject" pathParam="false" javaType="java.lang.Object"/>
+         </createMethod>
+         <updateMethod name="updateOrdersView1" dataControlName="DivasService" secured="false" payloadElementName="result">
+            <parameter name="ordersView1" valueProvider="SerializedDataObject" pathParam="false" javaType="java.lang.Object"/>
+         </updateMethod>
+         <mergeMethod name="mergeOrdersView1" dataControlName="DivasService" secured="false" payloadElementName="result">
+            <parameter name="ordersView1" valueProvider="SerializedDataObject" pathParam="false" javaType="java.lang.Object"/>
+         </mergeMethod></methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.MeasureUnit" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.MeasureUnitService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="MEASURE_UNIT">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="code" payloadAttributeName="Code" columnName="CODE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findMeasureUnitView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Groupmembers" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.GroupmembersService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="GROUPMEMBERS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="gName" payloadAttributeName="GName" columnName="G_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="gMember" payloadAttributeName="GMember" columnName="G_MEMBER" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findGroupmembersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.OrderStatus" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.OrderStatusService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="ORDER_STATUS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="name" payloadAttributeName="Name" columnName="NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findOrderStatusView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Kontragents" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.KontragentsService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="KONTRAGENTS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="isGroup" payloadAttributeName="IsGroup" columnName="IS_GROUP" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="parentId" payloadAttributeName="ParentId" columnName="PARENT_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="inn" payloadAttributeName="Inn" columnName="INN" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="okpo" payloadAttributeName="Okpo" columnName="OKPO" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kpp" payloadAttributeName="Kpp" columnName="KPP" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="namefull" payloadAttributeName="Namefull" columnName="NAMEFULL" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="urFiz" payloadAttributeName="UrFiz" columnName="UR_FIZ" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="predefined" payloadAttributeName="Predefined" columnName="PREDEFINED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isSupplier" payloadAttributeName="IsSupplier" columnName="IS_SUPPLIER" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isBuyer" payloadAttributeName="IsBuyer" columnName="IS_BUYER" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isMeasurer" payloadAttributeName="IsMeasurer" columnName="IS_MEASURER" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="userId" payloadAttributeName="UserId" columnName="USER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <oneToManyMapping attributeName="contact" payloadAttributeName="ContactDetailsView" referenceClassName="ua.divas.mobile.model.Contact" sendAsArrayIfOnlyOneEntry="true">
+            <foreignKeyColumnReference sourceTable="CONTACT" sourceColumn="KONTRAG_ID" targetTable="KONTRAGENTS" targetColumn="ID"/>
+         </oneToManyMapping>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findKontragentsView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+         <updateMethod name="updateKontragentsView1" dataControlName="DivasService" secured="false" payloadElementName="result">
+            <parameter name="kontragentsView1" valueProvider="SerializedDataObject" pathParam="false" javaType="java.lang.Object"/>
+         </updateMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Users" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.UsersService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="USERS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="firstName" payloadAttributeName="FirstName" columnName="FIRST_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="lastName" payloadAttributeName="LastName" columnName="LAST_NAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="email" payloadAttributeName="Email" columnName="EMAIL" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="isAdmin" payloadAttributeName="IsAdmin" columnName="IS_ADMIN" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="login" payloadAttributeName="Login" columnName="LOGIN" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="predefined" payloadAttributeName="Predefined" columnName="PREDEFINED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="uDescription" payloadAttributeName="UDescription" columnName="U_DESCRIPTION" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="isZamer" payloadAttributeName="IsZamer" columnName="IS_ZAMER" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isActive" payloadAttributeName="IsActive" columnName="IS_ACTIVE" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="dateBefore" payloadAttributeName="DateBefore" columnName="DATE_BEFORE" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="dateBefireAccept" payloadAttributeName="DateBefireAccept" columnName="DATE_BEFIRE_ACCEPT" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <oneToManyMapping attributeName="kassaSettings" payloadAttributeName="KassaSettingsView" referenceClassName="ua.divas.mobile.model.KassaSettings" sendAsArrayIfOnlyOneEntry="true">
+            <foreignKeyColumnReference sourceTable="KASSA_SETTINGS" sourceColumn="USER_ID" targetTable="USERS" targetColumn="ID"/>
+         </oneToManyMapping>
+         <oneToManyMapping attributeName="userSettings" payloadAttributeName="UserSettingsView" referenceClassName="ua.divas.mobile.model.UserSettings" sendAsArrayIfOnlyOneEntry="true">
+            <foreignKeyColumnReference sourceTable="USER_SETTINGS" sourceColumn="USER_ID" targetTable="USERS" targetColumn="ID"/>
+         </oneToManyMapping>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findUsersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.LastPrices" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.LastPricesService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="LAST_PRICES">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="nomId" payloadAttributeName="NomId" columnName="NOM_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="period" payloadAttributeName="Period" columnName="PERIOD" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+         <directMapping attributeName="edIzm" payloadAttributeName="EdIzm" columnName="ED_IZM" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="priceUsl" payloadAttributeName="PriceUsl" columnName="PRICE_USL" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+         <directMapping attributeName="priceGoods" payloadAttributeName="PriceGoods" columnName="PRICE_GOODS" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.math.BigDecimal" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findLastPricesView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Nomgroup" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.NomgroupService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="NOMGROUP">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="isGroup" payloadAttributeName="IsGroup" columnName="IS_GROUP" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="parentId" payloadAttributeName="ParentId" columnName="PARENT_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="usluga" payloadAttributeName="Usluga" columnName="USLUGA" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="predefined" payloadAttributeName="Predefined" columnName="PREDEFINED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="artikul" payloadAttributeName="Artikul" columnName="ARTIKUL" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findNomGroup1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.UserSettings" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.UserSettingsService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="USER_SETTINGS">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="userId" payloadAttributeName="UserId" columnName="USER_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="divisionId" payloadAttributeName="DivisionId" columnName="DIVISION_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="firmaId" payloadAttributeName="FirmaId" columnName="FIRMA_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="currencyId" payloadAttributeName="CurrencyId" columnName="CURRENCY_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kassaId" payloadAttributeName="KassaId" columnName="KASSA_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="mainUsluga" payloadAttributeName="MainUsluga" columnName="MAIN_USLUGA" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="activitiesId" payloadAttributeName="ActivitiesId" columnName="ACTIVITIES_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="zamerkontragId" payloadAttributeName="ZamerkontragId" columnName="ZAMERKONTRAG_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="kontragId" payloadAttributeName="KontragId" columnName="KONTRAG_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="netId" payloadAttributeName="NetId" columnName="NET_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findUsersView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="ua.divas.mobile.model.Kassa" persisted="true">
+      <crudServiceClass className="ua.divas.mobile.model.service.KassaService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remotePersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DataControlPersistenceManager" remoteReadInBackground="true" remoteWriteInBackground="true" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="true"/>
+      <table name="KASSA">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="Id" columnName="ID" columnDataType="VARCHAR" required="true" persisted="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="fullname" payloadAttributeName="Fullname" columnName="FULLNAME" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="isGroup" payloadAttributeName="IsGroup" columnName="IS_GROUP" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="parentId" payloadAttributeName="ParentId" columnName="PARENT_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="currId" payloadAttributeName="CurrId" columnName="CURR_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="divisionId" payloadAttributeName="DivisionId" columnName="DIVISION_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="deleted" payloadAttributeName="Deleted" columnName="DELETED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="predefined" payloadAttributeName="Predefined" columnName="PREDEFINED" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="firmaId" payloadAttributeName="FirmaId" columnName="FIRMA_ID" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+      </attributeMappings>
+      <methods>
+         <findAllMethod name="findKassaView1" dataControlName="DivasService" secured="false" deleteLocalRows="true" payloadElementName="result">
+            <parameter name="findCriteria" pathParam="false" javaType="java.lang.Object"/>
+            <parameter name="findControl" pathParam="false" javaType="java.lang.Object"/>
+         </findAllMethod>
+      </methods>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="oracle.ateam.sample.mobile.v2.persistence.service.DataSynchAction" dateFormat="dd-MMM-yyyy">
+      <table name="DATA_SYNCH_ACTIONS">
+         <primaryKeyColumn name="SERVICE_CLASS_NAME"/>
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" columnName="ID" columnDataType="NUMERIC" required="true" javaType="java.lang.Integer" keyAttribute="true"/>
+         <directMapping attributeName="serviceClass" columnName="SERVICE_CLASS_NAME" columnDataType="VARCHAR" required="true" javaType="java.lang.String" keyAttribute="true"/>
+         <directMapping attributeName="entityClassString" columnName="ENTITY_CLASS_NAME" columnDataType="VARCHAR" javaType="java.lang.String"/>
+         <directMapping attributeName="entityAsJSONString" columnName="JSON_PAYLOAD" columnDataType="VARCHAR" javaType="java.lang.String"/>
+         <directMapping attributeName="action" columnName="ACTION" columnDataType="VARCHAR" javaType="java.lang.String"/>
+         <directMapping attributeName="dateCreated" columnName="DATE_CREATED" columnDataType="DATE" javaType="java.util.Date"/>
+         <directMapping attributeName="lastSynchAttempt" columnName="DATE_LAST_SYNCH" columnDataType="DATE" javaType="java.util.Date"/>
+         <directMapping attributeName="lastSynchError" columnName="LAST_SYNCH_ERROR" columnDataType="VARCHAR" javaType="java.lang.String"/>
+         <directMapping attributeName="customMethodName" columnName="CUSTOM_METHOD_NAME" columnDataType="VARCHAR" javaType="java.lang.String"/>
+      </attributeMappings>
+   </classMappingDescriptor>
+   <classMappingDescriptor className="oracle.ateam.sample.mobile.logging.WebServiceCall" persisted="true" orderBy="TIMESTAMP desc">
+      <crudServiceClass className="oracle.ateam.sample.mobile.logging.WebServiceCallService" autoIncrementPrimaryKey="true" localPersistenceManager="oracle.ateam.sample.mobile.v2.persistence.manager.DBPersistenceManager" remoteReadInBackground="false" remoteWriteInBackground="false" showWebServiceInvocationErrors="false" autoQuery="true" enableOfflineTransactions="false"/>
+      <table name="WEB_SERVICE_CALL">
+         <primaryKeyColumn name="ID"/>
+      </table>
+      <attributeMappings>
+         <directMapping attributeName="id" payloadAttributeName="id" columnName="ID" columnDataType="NUMERIC" required="true" persisted="true" javaType="java.lang.Integer" keyAttribute="true"/>
+         <directMapping attributeName="connection" payloadAttributeName="connection" columnName="CONNECTION" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="request" payloadAttributeName="request" columnName="REQUEST" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="method" payloadAttributeName="method" columnName="METHOD" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="requestHeaders" payloadAttributeName="requestHeaders" columnName="REQUEST_HEADERS" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="duration" payloadAttributeName="duration" columnName="DURATION" columnDataType="NUMERIC" required="false" persisted="true" javaType="java.lang.Integer" keyAttribute="false"/>
+         <directMapping attributeName="requestPayload" payloadAttributeName="requestPayload" columnName="REQUEST_PAYLOAD" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="responsePayload" payloadAttributeName="responsePayload" columnName="RESPONSE_PAYLOAD" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="errorMessage" payloadAttributeName="errorMessage" columnName="ERROR_MESSAGE" columnDataType="VARCHAR" required="false" persisted="true" javaType="java.lang.String" keyAttribute="false"/>
+         <directMapping attributeName="timestamp" payloadAttributeName="timestamp" columnName="TIMESTAMP" columnDataType="DATE" required="false" persisted="true" javaType="java.util.Date" keyAttribute="false"/>
+      </attributeMappings>
+      <methods/>
+   </classMappingDescriptor>
+</mobileObjectPersistence>

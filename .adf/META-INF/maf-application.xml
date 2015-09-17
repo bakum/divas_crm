@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="Divas CRM" id="ua.divas.DivasCRM" appControllerFolder="app"
+                   listener-class="oracle.ateam.sample.mobile.lifecycle.InitDBLifeCycleListener">
+  <adfmf:featureReference refId="Orders" id="fr1"/>
+  <adfmf:featureReference refId="oracle.ateam.sample.mobile.wscalls" id="fr2"/>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+  </adfmf:navigation>
+  <adfmf:login defaultConnRefId="DivasSecurity"/>
+</adfmf:application>

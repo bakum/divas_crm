@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.23.11" id="findCriteria"
+          Package="DivasService.Types.findOrdersView1" BeanClass="DivasService.Types.findOrdersView1.findCriteria"
+          isJavaBased="false">
+  <Attribute Name="fetchStart" IsNotNull="true" Type="java.lang.Integer">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="fetchSize" IsNotNull="true" Type="java.lang.Integer">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="excludeAttribute" IsNotNull="true" Type="java.lang.Boolean">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="filter" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrdersView1.findCriteria.filter"/>
+  <AccessorAttribute id="sortOrder" IsCollection="false"
+                     BeanClass="DivasService.Types.findOrdersView1.findCriteria.sortOrder"/>
+  <AccessorAttribute id="findAttribute" IsCollection="true"
+                     BeanClass="DivasService.Types.findOrdersView1.findCriteria.findAttribute"
+                     CollectionBeanClass="DivasService.Types.findOrdersView1.findCriteria_Operations"/>
+  <AccessorAttribute id="childFindCriteria" IsCollection="true"
+                     BeanClass="DivasService.Types.findOrdersView1.findCriteria.childFindCriteria"
+                     CollectionBeanClass="DivasService.Types.findOrdersView1.findCriteria_Operations"/>
+</JavaBean>

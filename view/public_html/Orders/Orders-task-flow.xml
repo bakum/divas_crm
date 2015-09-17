@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="Orders-task-flow">
+    <default-activity>OrdersList</default-activity>
+    <view id="OrdersList">
+      <page>/Orders/OrdersList.amx</page>
+    </view>
+    <view id="Orders">
+      <page>/Orders/Orders.amx</page>
+    </view>
+    <view id="Oplaty">
+      <page>/Orders/Oplaty.amx</page>
+    </view>
+    <view id="Uslugi">
+      <page>/Orders/Uslugi.amx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>OrdersList</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>Orders</from-outcome>
+        <to-activity-id>Orders</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__3">
+      <from-activity-id>Orders</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>Oplaty</from-outcome>
+        <to-activity-id>Oplaty</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>Orders</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>Uslugi</from-outcome>
+        <to-activity-id>Uslugi</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>Orders</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>newOplaty</from-outcome>
+        <to-activity-id>Oplaty</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__9">
+      <from-activity-id>Orders</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome>newUslugi</from-outcome>
+        <to-activity-id>Uslugi</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-mobile-config>

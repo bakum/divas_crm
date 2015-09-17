@@ -1,0 +1,446 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="DivasService" className="oracle.adf.model.connection.webservice.impl.WebServiceConnectionImpl"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.webservice.api.WebServiceConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="WebServiceConnection">
+        <Contents>
+          <wsconnection description="http://rest.imx.net.ua/service/DivasService?WSDL"
+                        service="{/ua/divas/service/app/common/}DivasService">
+            <model name="{/ua/divas/service/app/common/}DivasService" xmlns="http://oracle.com/ws/model">
+              <service name="{/ua/divas/service/app/common/}DivasService">
+                <port name="DivasServiceSoapHttpPort" binding="{/ua/divas/service/app/common/}DivasServiceSoapHttp">
+                  <soap addressUrl="http://rest.imx.net.ua:80/service/DivasService"
+                        xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                  <operation name="getContactDetailsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getContactDetailsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateContactDetailsView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateContactDetailsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findContactDetailsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findContactDetailsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getCurrencyView1">
+                    <soap soapAction="/ua/divas/service/app/common/getCurrencyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findCurrencyView1">
+                    <soap soapAction="/ua/divas/service/app/common/findCurrencyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getDivisionSotrView1">
+                    <soap soapAction="/ua/divas/service/app/common/getDivisionSotrView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findDivisionSotrView1">
+                    <soap soapAction="/ua/divas/service/app/common/findDivisionSotrView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getDivisionsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getDivisionsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findDivisionsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findDivisionsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getFirmsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getFirmsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findFirmsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findFirmsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findKassaSettingsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findKassaSettingsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getKassaView1">
+                    <soap soapAction="/ua/divas/service/app/common/getKassaView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findKassaView1">
+                    <soap soapAction="/ua/divas/service/app/common/findKassaView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateKontragentsView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateKontragentsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findKontragentsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findKontragentsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getLastPricesView1">
+                    <soap soapAction="/ua/divas/service/app/common/getLastPricesView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findLastPricesView1">
+                    <soap soapAction="/ua/divas/service/app/common/findLastPricesView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getMeasureUnitView1">
+                    <soap soapAction="/ua/divas/service/app/common/getMeasureUnitView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findMeasureUnitView1">
+                    <soap soapAction="/ua/divas/service/app/common/findMeasureUnitView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOperationPkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOperationPkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOperationPkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOperationPkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOperationRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOperationRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOperationRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOperationRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOrderStatusView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOrderStatusView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="createOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/createOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="deleteOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/deleteOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="mergeOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/mergeOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOrdersTpOplatyView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOrdersTpOplatyView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="createOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/createOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="deleteOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/deleteOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="mergeOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/mergeOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOrdersTpUslugiView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOrdersTpUslugiView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateOrdersView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateOrdersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="mergeOrdersView1">
+                    <soap soapAction="/ua/divas/service/app/common/mergeOrdersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findOrdersView1">
+                    <soap soapAction="/ua/divas/service/app/common/findOrdersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getPkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/getPkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="createPkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/createPkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updatePkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/updatePkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="deletePkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/deletePkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="mergePkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/mergePkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findPkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/findPkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/getRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="createRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/createRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="updateRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/updateRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="deleteRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/deleteRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="mergeRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/mergeRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findRkoView1">
+                    <soap soapAction="/ua/divas/service/app/common/findRkoView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getUserSettingsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getUserSettingsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findUserSettingsView1">
+                    <soap soapAction="/ua/divas/service/app/common/findUserSettingsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findUsersView1">
+                    <soap soapAction="/ua/divas/service/app/common/findUsersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findGroupmembersView1">
+                    <soap soapAction="/ua/divas/service/app/common/findGroupmembersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getKassaSettingsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getKassaSettingsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findNomenklaturaView1">
+                    <soap soapAction="/ua/divas/service/app/common/findNomenklaturaView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOrderStatusView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOrderStatusView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="findNomGroup1">
+                    <soap soapAction="/ua/divas/service/app/common/findNomGroup1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getKontragentsView1">
+                    <soap soapAction="/ua/divas/service/app/common/getKontragentsView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getOrdersView1">
+                    <soap soapAction="/ua/divas/service/app/common/getOrdersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="createOrdersView1">
+                    <soap soapAction="/ua/divas/service/app/common/createOrdersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                  <operation name="getUsersView1">
+                    <soap soapAction="/ua/divas/service/app/common/getUsersView1"
+                          xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+                    <input name=""/>
+                    <output name=""/>
+                  </operation>
+                </port>
+              </service>
+            </model>
+          </wsconnection>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="MCS" className="oracle.adf.model.connection.rest.RestConnection" partial="true"
+             manageInOracleEnterpriseManager="true" deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+  </Reference>
+  <Reference name="PC" className="oracle.adf.model.connection.rest.RestConnection" partial="true"
+             manageInOracleEnterpriseManager="true" deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+  </Reference>
+  <Reference name="DivasSecurity" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="DivasSecurity" partial="false" manageInOracleEnterpriseManager="true"
+             deployable="true" xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login url="https://divas.imx.net.ua/service_auth/faces/index.jsf"/>
+          <logout url="https://divas.imx.net.ua/service_auth/faces/index.jsf"/>
+          <authenticationMode value="hybrid"/>
+          <idleTimeout value="300"/>
+          <sessionTimeout value="28800"/>
+          <maxFailuresBeforeCredentialCleared value="3"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="true"/>
+            <rememberPasswordDefault value="false"/>
+            <enableStayLoggedIn value="false"/>
+          </rememberCredentials>
+          <realm value="myrealm"/>
+          <accessControl url="http://rest.imx.net.ua/restful/authorize"/>
+          <userObjectFilter>
+            <role name="administrator"/>
+            <role name="z_manager"/>
+            <role name="z_dispatcher"/>
+          </userObjectFilter>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

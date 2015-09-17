@@ -1,0 +1,1524 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="DivasService" targetNamespace="/ua/divas/service/app/common/" xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/" xmlns:tns="/ua/divas/service/app/common/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:types="/ua/divas/service/app/common/types/">
+  <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+              xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+              wsu:Id="fast_infoset_service_policy">
+    <wsOptfiser:OptimizedFastInfosetSerialization enabled="true"
+                                                  xmlns:wsOptfiser="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service"/>
+  </wsp:Policy>
+  <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="ServiceException.wsdl"/>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="/ua/divas/service/app/common/types/" schemaLocation="DivasService.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="DivasService_getContactDetailsView1">
+    <wsdl:part name="parameters" element="types:getContactDetailsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getContactDetailsView1Response">
+    <wsdl:part name="parameters" element="types:getContactDetailsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateContactDetailsView1">
+    <wsdl:part name="parameters" element="types:updateContactDetailsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateContactDetailsView1Response">
+    <wsdl:part name="parameters" element="types:updateContactDetailsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findContactDetailsView1">
+    <wsdl:part name="parameters" element="types:findContactDetailsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findContactDetailsView1Response">
+    <wsdl:part name="parameters" element="types:findContactDetailsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getCurrencyView1">
+    <wsdl:part name="parameters" element="types:getCurrencyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getCurrencyView1Response">
+    <wsdl:part name="parameters" element="types:getCurrencyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findCurrencyView1">
+    <wsdl:part name="parameters" element="types:findCurrencyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findCurrencyView1Response">
+    <wsdl:part name="parameters" element="types:findCurrencyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getDivisionSotrView1">
+    <wsdl:part name="parameters" element="types:getDivisionSotrView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getDivisionSotrView1Response">
+    <wsdl:part name="parameters" element="types:getDivisionSotrView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findDivisionSotrView1">
+    <wsdl:part name="parameters" element="types:findDivisionSotrView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findDivisionSotrView1Response">
+    <wsdl:part name="parameters" element="types:findDivisionSotrView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getDivisionsView1">
+    <wsdl:part name="parameters" element="types:getDivisionsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getDivisionsView1Response">
+    <wsdl:part name="parameters" element="types:getDivisionsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findDivisionsView1">
+    <wsdl:part name="parameters" element="types:findDivisionsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findDivisionsView1Response">
+    <wsdl:part name="parameters" element="types:findDivisionsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getFirmsView1">
+    <wsdl:part name="parameters" element="types:getFirmsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getFirmsView1Response">
+    <wsdl:part name="parameters" element="types:getFirmsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findFirmsView1">
+    <wsdl:part name="parameters" element="types:findFirmsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findFirmsView1Response">
+    <wsdl:part name="parameters" element="types:findFirmsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKassaSettingsView1">
+    <wsdl:part name="parameters" element="types:findKassaSettingsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKassaSettingsView1Response">
+    <wsdl:part name="parameters" element="types:findKassaSettingsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKassaView1">
+    <wsdl:part name="parameters" element="types:getKassaView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKassaView1Response">
+    <wsdl:part name="parameters" element="types:getKassaView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKassaView1">
+    <wsdl:part name="parameters" element="types:findKassaView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKassaView1Response">
+    <wsdl:part name="parameters" element="types:findKassaView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateKontragentsView1">
+    <wsdl:part name="parameters" element="types:updateKontragentsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateKontragentsView1Response">
+    <wsdl:part name="parameters" element="types:updateKontragentsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKontragentsView1">
+    <wsdl:part name="parameters" element="types:findKontragentsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findKontragentsView1Response">
+    <wsdl:part name="parameters" element="types:findKontragentsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getLastPricesView1">
+    <wsdl:part name="parameters" element="types:getLastPricesView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getLastPricesView1Response">
+    <wsdl:part name="parameters" element="types:getLastPricesView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findLastPricesView1">
+    <wsdl:part name="parameters" element="types:findLastPricesView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findLastPricesView1Response">
+    <wsdl:part name="parameters" element="types:findLastPricesView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getMeasureUnitView1">
+    <wsdl:part name="parameters" element="types:getMeasureUnitView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getMeasureUnitView1Response">
+    <wsdl:part name="parameters" element="types:getMeasureUnitView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findMeasureUnitView1">
+    <wsdl:part name="parameters" element="types:findMeasureUnitView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findMeasureUnitView1Response">
+    <wsdl:part name="parameters" element="types:findMeasureUnitView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOperationPkoView1">
+    <wsdl:part name="parameters" element="types:getOperationPkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOperationPkoView1Response">
+    <wsdl:part name="parameters" element="types:getOperationPkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOperationPkoView1">
+    <wsdl:part name="parameters" element="types:findOperationPkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOperationPkoView1Response">
+    <wsdl:part name="parameters" element="types:findOperationPkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOperationRkoView1">
+    <wsdl:part name="parameters" element="types:getOperationRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOperationRkoView1Response">
+    <wsdl:part name="parameters" element="types:getOperationRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOperationRkoView1">
+    <wsdl:part name="parameters" element="types:findOperationRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOperationRkoView1Response">
+    <wsdl:part name="parameters" element="types:findOperationRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrderStatusView1">
+    <wsdl:part name="parameters" element="types:findOrderStatusView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrderStatusView1Response">
+    <wsdl:part name="parameters" element="types:findOrderStatusView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:getOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:getOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:createOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:createOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:updateOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:updateOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:deleteOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:deleteOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:mergeOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:mergeOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersTpOplatyView1">
+    <wsdl:part name="parameters" element="types:findOrdersTpOplatyView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersTpOplatyView1Response">
+    <wsdl:part name="parameters" element="types:findOrdersTpOplatyView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:getOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:getOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:createOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:createOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:updateOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:updateOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:deleteOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:deleteOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:mergeOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:mergeOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersTpUslugiView1">
+    <wsdl:part name="parameters" element="types:findOrdersTpUslugiView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersTpUslugiView1Response">
+    <wsdl:part name="parameters" element="types:findOrdersTpUslugiView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersView1">
+    <wsdl:part name="parameters" element="types:updateOrdersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateOrdersView1Response">
+    <wsdl:part name="parameters" element="types:updateOrdersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersView1">
+    <wsdl:part name="parameters" element="types:mergeOrdersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeOrdersView1Response">
+    <wsdl:part name="parameters" element="types:mergeOrdersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersView1">
+    <wsdl:part name="parameters" element="types:findOrdersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findOrdersView1Response">
+    <wsdl:part name="parameters" element="types:findOrdersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getPkoView1">
+    <wsdl:part name="parameters" element="types:getPkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getPkoView1Response">
+    <wsdl:part name="parameters" element="types:getPkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createPkoView1">
+    <wsdl:part name="parameters" element="types:createPkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createPkoView1Response">
+    <wsdl:part name="parameters" element="types:createPkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updatePkoView1">
+    <wsdl:part name="parameters" element="types:updatePkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updatePkoView1Response">
+    <wsdl:part name="parameters" element="types:updatePkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deletePkoView1">
+    <wsdl:part name="parameters" element="types:deletePkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deletePkoView1Response">
+    <wsdl:part name="parameters" element="types:deletePkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergePkoView1">
+    <wsdl:part name="parameters" element="types:mergePkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergePkoView1Response">
+    <wsdl:part name="parameters" element="types:mergePkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findPkoView1">
+    <wsdl:part name="parameters" element="types:findPkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findPkoView1Response">
+    <wsdl:part name="parameters" element="types:findPkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getRkoView1">
+    <wsdl:part name="parameters" element="types:getRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getRkoView1Response">
+    <wsdl:part name="parameters" element="types:getRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createRkoView1">
+    <wsdl:part name="parameters" element="types:createRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createRkoView1Response">
+    <wsdl:part name="parameters" element="types:createRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateRkoView1">
+    <wsdl:part name="parameters" element="types:updateRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_updateRkoView1Response">
+    <wsdl:part name="parameters" element="types:updateRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteRkoView1">
+    <wsdl:part name="parameters" element="types:deleteRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_deleteRkoView1Response">
+    <wsdl:part name="parameters" element="types:deleteRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeRkoView1">
+    <wsdl:part name="parameters" element="types:mergeRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_mergeRkoView1Response">
+    <wsdl:part name="parameters" element="types:mergeRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findRkoView1">
+    <wsdl:part name="parameters" element="types:findRkoView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findRkoView1Response">
+    <wsdl:part name="parameters" element="types:findRkoView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getUserSettingsView1">
+    <wsdl:part name="parameters" element="types:getUserSettingsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getUserSettingsView1Response">
+    <wsdl:part name="parameters" element="types:getUserSettingsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findUserSettingsView1">
+    <wsdl:part name="parameters" element="types:findUserSettingsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findUserSettingsView1Response">
+    <wsdl:part name="parameters" element="types:findUserSettingsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findUsersView1">
+    <wsdl:part name="parameters" element="types:findUsersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findUsersView1Response">
+    <wsdl:part name="parameters" element="types:findUsersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findGroupmembersView1">
+    <wsdl:part name="parameters" element="types:findGroupmembersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findGroupmembersView1Response">
+    <wsdl:part name="parameters" element="types:findGroupmembersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKassaSettingsView1">
+    <wsdl:part name="parameters" element="types:getKassaSettingsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKassaSettingsView1Response">
+    <wsdl:part name="parameters" element="types:getKassaSettingsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findNomenklaturaView1">
+    <wsdl:part name="parameters" element="types:findNomenklaturaView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findNomenklaturaView1Response">
+    <wsdl:part name="parameters" element="types:findNomenklaturaView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrderStatusView1">
+    <wsdl:part name="parameters" element="types:getOrderStatusView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrderStatusView1Response">
+    <wsdl:part name="parameters" element="types:getOrderStatusView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findNomGroup1">
+    <wsdl:part name="parameters" element="types:findNomGroup1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_findNomGroup1Response">
+    <wsdl:part name="parameters" element="types:findNomGroup1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKontragentsView1">
+    <wsdl:part name="parameters" element="types:getKontragentsView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getKontragentsView1Response">
+    <wsdl:part name="parameters" element="types:getKontragentsView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersView1">
+    <wsdl:part name="parameters" element="types:getOrdersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getOrdersView1Response">
+    <wsdl:part name="parameters" element="types:getOrdersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersView1">
+    <wsdl:part name="parameters" element="types:createOrdersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_createOrdersView1Response">
+    <wsdl:part name="parameters" element="types:createOrdersView1Response"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getUsersView1">
+    <wsdl:part name="parameters" element="types:getUsersView1"/>
+  </wsdl:message>
+  <wsdl:message name="DivasService_getUsersView1Response">
+    <wsdl:part name="parameters" element="types:getUsersView1Response"/>
+  </wsdl:message>
+  <wsdl:portType name="DivasService">
+    <wsdl:documentation>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="ContactDetailsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:ContactDetailsViewSDO" UpdateOpName="updateContactDetailsView1" GetOpName="getContactDetailsView1" FindOpName="findContactDetailsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="CurrencyView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:CurrencyViewSDO" GetOpName="getCurrencyView1" FindOpName="findCurrencyView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="DivisionSotrView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:DivisionSotrViewSDO" GetOpName="getDivisionSotrView1" FindOpName="findDivisionSotrView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="DivisionsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:DivisionsViewSDO" GetOpName="getDivisionsView1" FindOpName="findDivisionsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="FirmsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:FirmsViewSDO" GetOpName="getFirmsView1" FindOpName="findFirmsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="GroupmembersView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:GroupmembersViewSDO" FindOpName="findGroupmembersView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="KassaSettingsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:KassaSettingsViewSDO" GetOpName="getKassaSettingsView1" FindOpName="findKassaSettingsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="KassaView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:KassaViewSDO" GetOpName="getKassaView1" FindOpName="findKassaView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="KontragentsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:KontragentsViewSDO" UpdateOpName="updateKontragentsView1" GetOpName="getKontragentsView1" FindOpName="findKontragentsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="LastPricesView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:LastPricesViewSDO" GetOpName="getLastPricesView1" FindOpName="findLastPricesView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="MeasureUnitView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:MeasureUnitViewSDO" GetOpName="getMeasureUnitView1" FindOpName="findMeasureUnitView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="NomGroup1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:NomGroupSDO" FindOpName="findNomGroup1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="NomenklaturaView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:NomenklaturaViewSDO" FindOpName="findNomenklaturaView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OperationPkoView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OperationPkoViewSDO" GetOpName="getOperationPkoView1" FindOpName="findOperationPkoView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OperationRkoView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OperationRkoViewSDO" GetOpName="getOperationRkoView1" FindOpName="findOperationRkoView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OrderStatusView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OrderStatusViewSDO" GetOpName="getOrderStatusView1" FindOpName="findOrderStatusView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OrdersTpOplatyView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OrdersTpOplatyViewSDO" CreateOpName="createOrdersTpOplatyView1" UpdateOpName="updateOrdersTpOplatyView1" DeleteOpName="deleteOrdersTpOplatyView1" MergeOpName="mergeOrdersTpOplatyView1" GetOpName="getOrdersTpOplatyView1" FindOpName="findOrdersTpOplatyView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OrdersTpUslugiView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OrdersTpUslugiViewSDO" CreateOpName="createOrdersTpUslugiView1" UpdateOpName="updateOrdersTpUslugiView1" DeleteOpName="deleteOrdersTpUslugiView1" MergeOpName="mergeOrdersTpUslugiView1" GetOpName="getOrdersTpUslugiView1" FindOpName="findOrdersTpUslugiView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="OrdersView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:OrdersViewSDO" CreateOpName="createOrdersView1" UpdateOpName="updateOrdersView1" MergeOpName="mergeOrdersView1" GetOpName="getOrdersView1" FindOpName="findOrdersView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="PkoView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:PkoViewSDO" CreateOpName="createPkoView1" UpdateOpName="updatePkoView1" DeleteOpName="deletePkoView1" MergeOpName="mergePkoView1" GetOpName="getPkoView1" FindOpName="findPkoView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="RkoView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:RkoViewSDO" CreateOpName="createRkoView1" UpdateOpName="updateRkoView1" DeleteOpName="deleteRkoView1" MergeOpName="mergeRkoView1" GetOpName="getRkoView1" FindOpName="findRkoView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="UserSettingsView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:UserSettingsViewSDO" GetOpName="getUserSettingsView1" FindOpName="findUserSettingsView1"/>
+      <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="UsersView1" xmlns:ns0="/ua/divas/service/vo/common/" SDOName="ns0:UsersViewSDO" GetOpName="getUsersView1" FindOpName="findUsersView1"/>
+    </wsdl:documentation>
+    <wsdl:operation name="getContactDetailsView1">
+      <wsdl:input message="tns:DivasService_getContactDetailsView1"/>
+      <wsdl:output message="tns:DivasService_getContactDetailsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateContactDetailsView1">
+      <wsdl:input message="tns:DivasService_updateContactDetailsView1"/>
+      <wsdl:output message="tns:DivasService_updateContactDetailsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findContactDetailsView1">
+      <wsdl:input message="tns:DivasService_findContactDetailsView1"/>
+      <wsdl:output message="tns:DivasService_findContactDetailsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyView1">
+      <wsdl:input message="tns:DivasService_getCurrencyView1"/>
+      <wsdl:output message="tns:DivasService_getCurrencyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrencyView1">
+      <wsdl:input message="tns:DivasService_findCurrencyView1"/>
+      <wsdl:output message="tns:DivasService_findCurrencyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDivisionSotrView1">
+      <wsdl:input message="tns:DivasService_getDivisionSotrView1"/>
+      <wsdl:output message="tns:DivasService_getDivisionSotrView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findDivisionSotrView1">
+      <wsdl:input message="tns:DivasService_findDivisionSotrView1"/>
+      <wsdl:output message="tns:DivasService_findDivisionSotrView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDivisionsView1">
+      <wsdl:input message="tns:DivasService_getDivisionsView1"/>
+      <wsdl:output message="tns:DivasService_getDivisionsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findDivisionsView1">
+      <wsdl:input message="tns:DivasService_findDivisionsView1"/>
+      <wsdl:output message="tns:DivasService_findDivisionsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getFirmsView1">
+      <wsdl:input message="tns:DivasService_getFirmsView1"/>
+      <wsdl:output message="tns:DivasService_getFirmsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findFirmsView1">
+      <wsdl:input message="tns:DivasService_findFirmsView1"/>
+      <wsdl:output message="tns:DivasService_findFirmsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findKassaSettingsView1">
+      <wsdl:input message="tns:DivasService_findKassaSettingsView1"/>
+      <wsdl:output message="tns:DivasService_findKassaSettingsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getKassaView1">
+      <wsdl:input message="tns:DivasService_getKassaView1"/>
+      <wsdl:output message="tns:DivasService_getKassaView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findKassaView1">
+      <wsdl:input message="tns:DivasService_findKassaView1"/>
+      <wsdl:output message="tns:DivasService_findKassaView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateKontragentsView1">
+      <wsdl:input message="tns:DivasService_updateKontragentsView1"/>
+      <wsdl:output message="tns:DivasService_updateKontragentsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findKontragentsView1">
+      <wsdl:input message="tns:DivasService_findKontragentsView1"/>
+      <wsdl:output message="tns:DivasService_findKontragentsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPricesView1">
+      <wsdl:input message="tns:DivasService_getLastPricesView1"/>
+      <wsdl:output message="tns:DivasService_getLastPricesView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findLastPricesView1">
+      <wsdl:input message="tns:DivasService_findLastPricesView1"/>
+      <wsdl:output message="tns:DivasService_findLastPricesView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getMeasureUnitView1">
+      <wsdl:input message="tns:DivasService_getMeasureUnitView1"/>
+      <wsdl:output message="tns:DivasService_getMeasureUnitView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findMeasureUnitView1">
+      <wsdl:input message="tns:DivasService_findMeasureUnitView1"/>
+      <wsdl:output message="tns:DivasService_findMeasureUnitView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationPkoView1">
+      <wsdl:input message="tns:DivasService_getOperationPkoView1"/>
+      <wsdl:output message="tns:DivasService_getOperationPkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationPkoView1">
+      <wsdl:input message="tns:DivasService_findOperationPkoView1"/>
+      <wsdl:output message="tns:DivasService_findOperationPkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationRkoView1">
+      <wsdl:input message="tns:DivasService_getOperationRkoView1"/>
+      <wsdl:output message="tns:DivasService_getOperationRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationRkoView1">
+      <wsdl:input message="tns:DivasService_findOperationRkoView1"/>
+      <wsdl:output message="tns:DivasService_findOperationRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOrderStatusView1">
+      <wsdl:input message="tns:DivasService_findOrderStatusView1"/>
+      <wsdl:output message="tns:DivasService_findOrderStatusView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_getOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_getOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_createOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_createOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_updateOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_updateOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_deleteOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_deleteOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_mergeOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_mergeOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersTpOplatyView1">
+      <wsdl:input message="tns:DivasService_findOrdersTpOplatyView1"/>
+      <wsdl:output message="tns:DivasService_findOrdersTpOplatyView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_getOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_getOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_createOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_createOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_updateOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_updateOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_deleteOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_deleteOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_mergeOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_mergeOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersTpUslugiView1">
+      <wsdl:input message="tns:DivasService_findOrdersTpUslugiView1"/>
+      <wsdl:output message="tns:DivasService_findOrdersTpUslugiView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersView1">
+      <wsdl:input message="tns:DivasService_updateOrdersView1"/>
+      <wsdl:output message="tns:DivasService_updateOrdersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersView1">
+      <wsdl:input message="tns:DivasService_mergeOrdersView1"/>
+      <wsdl:output message="tns:DivasService_mergeOrdersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersView1">
+      <wsdl:input message="tns:DivasService_findOrdersView1"/>
+      <wsdl:output message="tns:DivasService_findOrdersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getPkoView1">
+      <wsdl:input message="tns:DivasService_getPkoView1"/>
+      <wsdl:output message="tns:DivasService_getPkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createPkoView1">
+      <wsdl:input message="tns:DivasService_createPkoView1"/>
+      <wsdl:output message="tns:DivasService_createPkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updatePkoView1">
+      <wsdl:input message="tns:DivasService_updatePkoView1"/>
+      <wsdl:output message="tns:DivasService_updatePkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deletePkoView1">
+      <wsdl:input message="tns:DivasService_deletePkoView1"/>
+      <wsdl:output message="tns:DivasService_deletePkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergePkoView1">
+      <wsdl:input message="tns:DivasService_mergePkoView1"/>
+      <wsdl:output message="tns:DivasService_mergePkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findPkoView1">
+      <wsdl:input message="tns:DivasService_findPkoView1"/>
+      <wsdl:output message="tns:DivasService_findPkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getRkoView1">
+      <wsdl:input message="tns:DivasService_getRkoView1"/>
+      <wsdl:output message="tns:DivasService_getRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createRkoView1">
+      <wsdl:input message="tns:DivasService_createRkoView1"/>
+      <wsdl:output message="tns:DivasService_createRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="updateRkoView1">
+      <wsdl:input message="tns:DivasService_updateRkoView1"/>
+      <wsdl:output message="tns:DivasService_updateRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRkoView1">
+      <wsdl:input message="tns:DivasService_deleteRkoView1"/>
+      <wsdl:output message="tns:DivasService_deleteRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="mergeRkoView1">
+      <wsdl:input message="tns:DivasService_mergeRkoView1"/>
+      <wsdl:output message="tns:DivasService_mergeRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findRkoView1">
+      <wsdl:input message="tns:DivasService_findRkoView1"/>
+      <wsdl:output message="tns:DivasService_findRkoView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getUserSettingsView1">
+      <wsdl:input message="tns:DivasService_getUserSettingsView1"/>
+      <wsdl:output message="tns:DivasService_getUserSettingsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findUserSettingsView1">
+      <wsdl:input message="tns:DivasService_findUserSettingsView1"/>
+      <wsdl:output message="tns:DivasService_findUserSettingsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findUsersView1">
+      <wsdl:input message="tns:DivasService_findUsersView1"/>
+      <wsdl:output message="tns:DivasService_findUsersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findGroupmembersView1">
+      <wsdl:input message="tns:DivasService_findGroupmembersView1"/>
+      <wsdl:output message="tns:DivasService_findGroupmembersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getKassaSettingsView1">
+      <wsdl:input message="tns:DivasService_getKassaSettingsView1"/>
+      <wsdl:output message="tns:DivasService_getKassaSettingsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findNomenklaturaView1">
+      <wsdl:input message="tns:DivasService_findNomenklaturaView1"/>
+      <wsdl:output message="tns:DivasService_findNomenklaturaView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderStatusView1">
+      <wsdl:input message="tns:DivasService_getOrderStatusView1"/>
+      <wsdl:output message="tns:DivasService_getOrderStatusView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="findNomGroup1">
+      <wsdl:input message="tns:DivasService_findNomGroup1"/>
+      <wsdl:output message="tns:DivasService_findNomGroup1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getKontragentsView1">
+      <wsdl:input message="tns:DivasService_getKontragentsView1"/>
+      <wsdl:output message="tns:DivasService_getKontragentsView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersView1">
+      <wsdl:input message="tns:DivasService_getOrdersView1"/>
+      <wsdl:output message="tns:DivasService_getOrdersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersView1">
+      <wsdl:input message="tns:DivasService_createOrdersView1"/>
+      <wsdl:output message="tns:DivasService_createOrdersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getUsersView1">
+      <wsdl:input message="tns:DivasService_getUsersView1"/>
+      <wsdl:output message="tns:DivasService_getUsersView1Response"/>
+      <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DivasServiceSoapHttp" type="tns:DivasService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#fast_infoset_service_policy"
+                         wsdl:required="false"/>
+    <wsdl:operation name="getContactDetailsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getContactDetailsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateContactDetailsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateContactDetailsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findContactDetailsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findContactDetailsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getCurrencyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrencyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findCurrencyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDivisionSotrView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getDivisionSotrView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findDivisionSotrView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findDivisionSotrView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDivisionsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getDivisionsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findDivisionsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findDivisionsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getFirmsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getFirmsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findFirmsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findFirmsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findKassaSettingsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findKassaSettingsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getKassaView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getKassaView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findKassaView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findKassaView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateKontragentsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateKontragentsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findKontragentsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findKontragentsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getLastPricesView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getLastPricesView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findLastPricesView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findLastPricesView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getMeasureUnitView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getMeasureUnitView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findMeasureUnitView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findMeasureUnitView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationPkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOperationPkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationPkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOperationPkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOperationRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOperationRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOperationRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOperationRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOrderStatusView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOrderStatusView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/createOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/deleteOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/mergeOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersTpOplatyView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOrdersTpOplatyView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/createOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/deleteOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/mergeOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersTpUslugiView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOrdersTpUslugiView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrdersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateOrdersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeOrdersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/mergeOrdersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findOrdersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findOrdersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getPkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/createPkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updatePkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deletePkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/deletePkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergePkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/mergePkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findPkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findPkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/createRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/updateRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/deleteRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="mergeRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/mergeRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findRkoView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findRkoView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserSettingsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getUserSettingsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findUserSettingsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findUserSettingsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findUsersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findUsersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findGroupmembersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findGroupmembersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getKassaSettingsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getKassaSettingsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findNomenklaturaView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findNomenklaturaView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderStatusView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOrderStatusView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="findNomGroup1">
+      <soap:operation soapAction="/ua/divas/service/app/common/findNomGroup1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getKontragentsView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getKontragentsView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getOrdersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createOrdersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/createOrdersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUsersView1">
+      <soap:operation soapAction="/ua/divas/service/app/common/getUsersView1"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ServiceException">
+        <soap:fault name="ServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DivasService">
+    <wsdl:port name="DivasServiceSoapHttpPort" binding="tns:DivasServiceSoapHttp">
+      <soap:address location="http://localhost:7201/DivasCRM-app-context-root/DivasServiceService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

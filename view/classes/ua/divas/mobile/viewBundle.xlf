@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+  <file source-language="en" original="ua.divas.mobile.viewBundle" datatype="x-oracle-adf">
+    <body>
+      <trans-unit id="UAH">
+        <source>UAH</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MEASURING">
+        <source>Measuring</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SERVICES">
+        <source>Services</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PAYMENT">
+        <source>Payments</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SYNCHRONIZE">
+        <source>Synchronize</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PENDING_SYNC_ACTIONS">
+        <source>Pending Sync Actions</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DELETE">
+        <source>Delete</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="REFRESH">
+        <source>Refresh</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="ORDERS__">
+        <source>Order #</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="USLUGI_">
+        <source>Service works</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DATE_LABEL">
+        <source>Date</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DATE_OF_MEASURE">
+        <source>Date of measure</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="STATUS_LABEL">
+        <source>Status</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="KASSA_LABEL">
+        <source>Cashbox</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="CUSTOMER_LABEL">
+        <source>Customer</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DESCRIPTION_LABEL">
+        <source>Description</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MEASURER_LABEL">
+        <source>Measurer</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MANAGER_LABEL">
+        <source>Manager</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="NUMBER_LABEL">
+        <source>Number</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DIVISION_LABEL">
+        <source>Division</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PLAN_SUMM">
+        <source>Approximate amount</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="ua.divas.mobile.model.Orders.id.Property_VALUE">
+        <source>value</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SELECTION_REQUIRED">
+        <source>Selection required</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SEARCH">
+        <source>Search</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SUMMA_LABEL">
+        <source>Amount</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DETAIL_LABEL">
+        <source>Order detail</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PAYMENT_LABEL">
+        <source>Payment</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

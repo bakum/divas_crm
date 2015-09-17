@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/ua/divas/service/vo/common/" xmlns:sdoJava="commonj.sdo/java" sdoJava:package="ua.divas.service.vo.common" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:sdoXML="commonj.sdo/xml" xmlns="/ua/divas/service/vo/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+  <xsd:include schemaLocation="ContactDetailsViewSDO.xsd"/>
+  <xsd:include schemaLocation="OrdersViewSDO.xsd"/>
+  <xsd:include schemaLocation="OrdersTpOplatyViewSDO.xsd"/>
+  <xsd:include schemaLocation="OrdersTpUslugiViewSDO.xsd"/>
+  <xsd:include schemaLocation="PkoViewSDO.xsd"/>
+  <xsd:include schemaLocation="RkoViewSDO.xsd"/>
+  <xsd:include schemaLocation="UserSettingsViewSDO.xsd"/>
+  <xsd:complexType name="KontragentsViewSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>Id</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="IsGroup" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="ParentId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Fullname" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Deleted" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="Inn" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Okpo" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Kpp" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Namefull" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="UrFiz" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="Version" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="Predefined" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="IsSupplier" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="IsBuyer" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="IsMeasurer" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="UserId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Photo" nillable="true" type="ns0:base64Binary-DataHandler"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="KontragentsView" type="KontragentsViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="ContactDetailsView" type="ContactDetailsViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersView" type="OrdersViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersView1" type="OrdersViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersView2" type="OrdersViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersTpOplatyView" type="OrdersTpOplatyViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersTpUslugiView" type="OrdersTpUslugiViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="PkoView" type="PkoViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="RkoView" type="RkoViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserSettingsView" type="UserSettingsViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserSettingsView1" type="UserSettingsViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserSettingsView2" type="UserSettingsViewSDO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="kontragentsViewSDO" type="KontragentsViewSDO"/>
+</xsd:schema>

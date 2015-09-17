@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.23.11" id="DataControls"
+                    Package="ua.divas.app">
+  <AdapterDataControl id="DeviceFeatures" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="oracle.adf.model.datacontrols.device.DeviceDataControl"
+                      BeanClass="oracle.adf.model.datacontrols.device.DeviceDataControl"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="oracle.adf.model.datacontrols.device.DeviceDataControl"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="ApplicationFeatures" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="oracle.adf.model.datacontrols.application.ApplicationFeatures"
+                      BeanClass="oracle.adf.model.datacontrols.application.ApplicationFeatures"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="oracle.adf.model.datacontrols.application.ApplicationFeatures"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="DivasService" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="ua.divas.app.DivasService"
+                      BeanClass="ua.divas.app.DivasService" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="DivasService" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="ua.divas.app/DivasService.wsdl" ensureKeyAttribute="true" useWSDLIdentity="true"
+                  dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="DivasService" namespace="/ua/divas/service/app/common/" connection="DivasService">
+          <port name="DivasServiceSoapHttpPort">
+            <operation name="findOperationRkoView1"/>
+            <operation name="deleteOrdersTpOplatyView1"/>
+            <operation name="createRkoView1"/>
+            <operation name="findKassaSettingsView1"/>
+            <operation name="getOrdersTpOplatyView1"/>
+            <operation name="updateKontragentsView1"/>
+            <operation name="findCurrencyView1"/>
+            <operation name="getContactDetailsView1"/>
+            <operation name="getOrdersView1"/>
+            <operation name="getKontragentsView1"/>
+            <operation name="mergeRkoView1"/>
+            <operation name="deletePkoView1"/>
+            <operation name="findPkoView1"/>
+            <operation name="getDivisionSotrView1"/>
+            <operation name="getFirmsView1"/>
+            <operation name="updateRkoView1"/>
+            <operation name="deleteRkoView1"/>
+            <operation name="getKassaSettingsView1"/>
+            <operation name="findOrdersTpOplatyView1"/>
+            <operation name="createPkoView1"/>
+            <operation name="findNomenklaturaView1"/>
+            <operation name="createOrdersView1"/>
+            <operation name="updatePkoView1"/>
+            <operation name="findOperationPkoView1"/>
+            <operation name="findOrdersView1"/>
+            <operation name="getDivisionsView1"/>
+            <operation name="findMeasureUnitView1"/>
+            <operation name="createOrdersTpOplatyView1"/>
+            <operation name="findGroupmembersView1"/>
+            <operation name="findDivisionSotrView1"/>
+            <operation name="updateOrdersTpUslugiView1"/>
+            <operation name="mergePkoView1"/>
+            <operation name="findContactDetailsView1"/>
+            <operation name="getRkoView1"/>
+            <operation name="findOrderStatusView1"/>
+            <operation name="findKontragentsView1"/>
+            <operation name="getMeasureUnitView1"/>
+            <operation name="createOrdersTpUslugiView1"/>
+            <operation name="mergeOrdersTpOplatyView1"/>
+            <operation name="findUsersView1"/>
+            <operation name="getUserSettingsView1"/>
+            <operation name="getUsersView1"/>
+            <operation name="getOperationRkoView1"/>
+            <operation name="findLastPricesView1"/>
+            <operation name="findOrdersTpUslugiView1"/>
+            <operation name="findDivisionsView1"/>
+            <operation name="findNomGroup1"/>
+            <operation name="updateContactDetailsView1"/>
+            <operation name="findUserSettingsView1"/>
+            <operation name="findKassaView1"/>
+            <operation name="mergeOrdersTpUslugiView1"/>
+            <operation name="updateOrdersView1"/>
+            <operation name="getOrderStatusView1"/>
+            <operation name="getOrdersTpUslugiView1"/>
+            <operation name="updateOrdersTpOplatyView1"/>
+            <operation name="getOperationPkoView1"/>
+            <operation name="getCurrencyView1"/>
+            <operation name="getPkoView1"/>
+            <operation name="mergeOrdersView1"/>
+            <operation name="getKassaView1"/>
+            <operation name="deleteOrdersTpUslugiView1"/>
+            <operation name="findFirmsView1"/>
+            <operation name="findRkoView1"/>
+            <operation name="getLastPricesView1"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.23.11" id="DataControls"
+                    Package="ua.divas.mobile">
+  <AdapterDataControl id="OrdersService" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.OrdersService"
+                      BeanClass="ua.divas.mobile.model.service.OrdersService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.OrdersService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="KontragentsService" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.KontragentsService"
+                      BeanClass="ua.divas.mobile.model.service.KontragentsService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.KontragentsService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="UsersService" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.UsersService"
+                      BeanClass="ua.divas.mobile.model.service.UsersService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.UsersService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="OrderStatusService" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.OrderStatusService"
+                      BeanClass="ua.divas.mobile.model.service.OrderStatusService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.OrderStatusService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="OplatyService" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.OplatyService"
+                      BeanClass="ua.divas.mobile.model.service.OplatyService"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="ua.divas.mobile.model.Oplaty"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.OplatyService"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="AuthUser" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="ua.divas.mobile.model.service.AuthUser"
+                      BeanClass="ua.divas.mobile.model.service.AuthUser"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bean-definition BeanClass="ua.divas.mobile.model.service.AuthUser"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

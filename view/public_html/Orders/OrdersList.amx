@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:loadBundle basename="ua.divas.mobile.viewBundle" var="viewBundle" id="lb1"/>
+  <amx:panelPage id="firstPage">
+    <amx:facet name="header">
+      <amx:outputText value="#{viewBundle.MEASURING}" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+          </amx:facet>
+    <amx:facet name="secondary">
+      <amx:panelGroupLayout id="pglsec" layout="horizontal" valign="middle">
+                <amx:commandLink  id="clmenu">
+            <amx:image id="imenu" source="/images/ic_action_overflow.png" inlineStyle="height:32px; width:32px;"/>
+            <amx:showPopupBehavior align="bottomCenter" decoration="anchor" alignId="clmenu" type="action" popupId="p1"/>
+          </amx:commandLink>
+          <amx:image id="bgRunImg" source="/images/reloading.gif" inlineStyle="margin-right:5px;" 
+            rendered="#{applicationScope.ampa_bgtask_running}"/>
+      </amx:panelGroupLayout>
+    </amx:facet>
+    <amx:panelStretchLayout id="psl1" scrollPolicy="scroll">
+      <amx:facet name="top">
+                
+        <amx:panelGroupLayout id="pgl1" layout="horizontal">
+          <amx:inputText value="#{bindings.searchValue.inputValue}" hintText="#{viewBundle.SEARCH}" label="" id="it1"/>
+          <amx:commandLink actionListener="#{bindings.findOrders.execute}" 
+                             id="cb3">
+            <amx:image id="ifind" source="/images/ic_action_search.png" inlineStyle="height:32px; width:32px;"/>
+          </amx:commandLink>
+        </amx:panelGroupLayout>
+              </amx:facet>
+      <amx:facet name="center">
+        <amx:listView var="row" value="#{bindings.orders.collectionModel}"
+                    fetchSize="#{bindings.orders.rangeSize}" id="lv1" 
+                   selectedRowKeys="#{bindings.orders.collectionModel.selectedRow}"
+ 
+                   selectionListener="#{bindings.orders.collectionModel.makeCurrent}" 
+                  
+                   showMoreStrategy="autoScroll"
+ bufferStrategy="viewport"
+             >
+        <amx:listItem id="li2" action="Orders">
+
+                                   
+          <amx:tableLayout width="100%" id="tl1Orders">
+            <amx:rowLayout id="rl1Orders">
+              <amx:cellFormat width="10px" rowSpan="2" id="cf2Orders"/>
+              <amx:cellFormat   width="60%"  height="28px" id="cf3Orders">
+                  <amx:panelGroupLayout id="pgl2" layout="horizontal">
+                    <amx:outputText value="#{row.num}" id="ot2"/>
+                    <amx:spacer id="s1" width="10"/>
+                    <amx:outputText value="#{row.dat}" id="ot2Orders">
+                      <amx:convertDateTime id="cdt1" pattern="dd-MM-yyyy"/>
+                    </amx:outputText>
+                  </amx:panelGroupLayout>
+                </amx:cellFormat>
+              <amx:cellFormat width="10px" rowSpan="2" id="cf1Orders"/>
+              <amx:cellFormat width="40%" halign="end" id="cf4Orders">
+                                <amx:outputText value="#{row.kontragName}" styleClass="adfmf-listItem-highlightText" id="ot3Orders"/>
+                              </amx:cellFormat>
+            </amx:rowLayout>
+              <amx:rowLayout id="rl2Orders">
+              <amx:cellFormat width="60%" height="12px" id="cf5Orders">
+                                <amx:outputText value="#{row.datZam}" styleClass="adfmf-listItem-captionText" id="ot4Orders">
+                    <amx:convertDateTime id="cdt2" pattern="dd-MM-yyyy HH:mm"/>
+                  </amx:outputText>
+                              </amx:cellFormat>
+              <amx:cellFormat width="40%" halign="end" id="cf6Orders">
+                                <amx:outputText value="#{row.zamerName}" styleClass="adfmf-listItem-captionText" id="ot5Orders"/>
+                              </amx:cellFormat>
+            </amx:rowLayout>
+              <amx:rowLayout id="rl1">
+                <amx:cellFormat id="cf2" rowSpan="2" height="10px"/>
+                <amx:cellFormat id="cf1" height="12px" width="60%">
+                  <amx:outputText value="#{row.userName}" id="ot3" styleClass="adfmf-listItem-captionText"/>
+                </amx:cellFormat>
+                <amx:cellFormat id="cf4" rowSpan="2" height="10px"/>
+                <amx:cellFormat id="cf3" width="40%" halign="end">
+                  <amx:outputText value="#{row.statusName}" id="ot4" styleClass="adfmf-listItem-captionText"/>
+                </amx:cellFormat>
+              </amx:rowLayout>
+            </amx:tableLayout>
+            <amx:setPropertyListener id="spl1" from="pflMain" to="#{pageFlowScope.viewId}"/>
+          </amx:listItem>
+        </amx:listView>
+      </amx:facet>
+    </amx:panelStretchLayout>
+  </amx:panelPage>
+  <amx:popup id="p1" animation="slideDown" autoDismiss="true" inlineStyle="width:50%;">
+    <amx:panelGroupLayout id="pglpu" layout="vertical">
+      <amx:spacer height="10" id="ms1"/>
+ 
+            <amx:commandLink  text="Refresh" actionListener="#{bindings.findAllOrdersRemote.execute}" disabled="#{deviceScope.hardware.networkStatus=='NotReachable' or deviceScope.hardware.networkStatus=='unknown'}"  id="menRefr">
+        <amx:closePopupBehavior id="mencRefr" popupId="p1" type="action"/>                         
+      </amx:commandLink>
+      <amx:spacer height="20" id="ms2"/>
+                  <amx:commandLink id="menSync" disabled="#{!bindings.hasOrdersDataSynchActions.inputValue or deviceScope.hardware.networkStatus=='NotReachable' or deviceScope.hardware.networkStatus=='unknown'}" 
+       actionListener="#{bindings.synchronizeOrders.execute}" text="Synchronize">
+        <amx:closePopupBehavior id="mencSync" popupId="p1" type="action"/>                                                 
+      </amx:commandLink>
+      <amx:spacer height="20" id="ms3"/>
+            <amx:commandLink id="menPsa" disabled="#{!bindings.hasOrdersDataSynchActions.inputValue}" text="Pending Sync Actions"
+                         actionListener="#{GoToFeature.goToDataSynchFeature}">
+        <amx:setPropertyListener id="menspaspl" from="ua.divas.mobile.model.Orders"
+                                 to="#{applicationScope.dataSynchEntity}"/>
+        <amx:closePopupBehavior id="mencPsa" popupId="p1" type="action"/>                         
+      </amx:commandLink>
+      <amx:spacer height="10" id="ms4"/>
+    </amx:panelGroupLayout>
+  </amx:popup>
+</amx:view>

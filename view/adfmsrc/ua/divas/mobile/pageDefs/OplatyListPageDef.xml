@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="OplatyListPageDef"
+                Package="ua.divas.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="OplatyServiceIterator" Binds="root" DataControl="OplatyService" RangeSize="25"/>
+    <accessorIterator id="oplatyIterator" MasterBinding="OplatyServiceIterator" Binds="oplaty"
+                      BeanClass="ua.divas.mobile.model.Oplaty" DataControl="OplatyService" RangeSize="25"/>
+  </executables>
+  <bindings>
+    <attributeValues id="hasOplatyDataSynchActions" IterBinding="OplatyServiceIterator">
+      <AttrNames>
+        <Item Value="hasOplatyDataSynchActions"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="CreateOplaty" RequiresUpdateModel="true" Action="createRow" IterBinding="oplatyIterator"/>
+    <tree id="oplaty" IterBinding="oplatyIterator">
+      <nodeDefinition Name="oplaty0" DefName="ua.divas.mobile.model.Oplaty">
+        <AttrNames>
+          <Item Value="id"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="findAllOplatyRemote" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="findAllOplatyRemote" DataControl="OplatyService"
+                  InstanceName="data.OplatyService.dataProvider" IsViewObjectMethod="false"/>
+    <methodAction id="synchronizeOplaty" RequiresUpdateModel="true" Action="invokeMethod" MethodName="synchronizeOplaty"
+                  DataControl="OplatyService" InstanceName="data.OplatyService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="inBackground" NDValue="true" NDType="java.lang.Boolean"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

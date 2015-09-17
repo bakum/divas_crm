@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="UslugiPageDef"
+                Package="ua.divas.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="OrdersServiceIterator" Binds="root" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="ordersIterator" MasterBinding="OrdersServiceIterator" Binds="orders"
+                      BeanClass="ua.divas.mobile.model.Orders" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="uslugiIterator" MasterBinding="ordersIterator" Binds="uslugi"
+                      BeanClass="ua.divas.mobile.model.Uslugi" DataControl="OrdersService" RangeSize="25"/>
+  </executables>
+  <bindings>
+    <attributeValues id="hasOrdersDataSynchActions" IterBinding="OrdersServiceIterator">
+      <AttrNames>
+        <Item Value="hasOrdersDataSynchActions"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="isNewEntity" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="isNewEntity"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="saveOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="saveOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="entity" NDValue="#{bindings.ordersIterator.currentRow.dataProvider}"
+                 NDType="ua.divas.mobile.model.Orders"/>
+    </methodAction>
+    <attributeValues id="id" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="orderId" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="orderId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="nomId" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="nomId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="price" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="price"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="summ" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="summ"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="datComplete" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="datComplete"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="sotrId" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="sotrId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="datToPay" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="datToPay"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="groupId" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="groupId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="measureId" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="measureId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="quantity" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="quantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="addWork" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="addWork"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="priceAdd" IterBinding="uslugiIterator">
+      <AttrNames>
+        <Item Value="priceAdd"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="DeleteUslugi" RequiresUpdateModel="false" Action="removeCurrentRow" IterBinding="uslugiIterator"/>
+    <methodAction id="synchronizeOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="synchronizeOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="inBackground" NDValue="true" NDType="java.lang.Boolean"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

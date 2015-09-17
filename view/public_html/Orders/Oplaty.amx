@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:loadBundle basename="ua.divas.mobile.viewBundle" var="viewBundle" id="lb1"/>
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+ 
+      <amx:outputText value="#{viewBundle.PAYMENT_LABEL}" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+       <amx:commandButton action="__back" id="cbbck" text="Back"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:panelGroupLayout id="pglsec" layout="horizontal" valign="middle">
+            <amx:commandLink actionListener="#{bindings.saveOrders.execute}" 
+              action="__back"
+                           id="cb2">
+          <amx:image id="isave" source="/images/ic_action_save.png" inlineStyle="height:32px; width:32px;"/>
+      </amx:commandLink>       
+                <amx:commandLink  id="clmenu">
+            <amx:image id="imenu" source="/images/ic_action_overflow.png" inlineStyle="height:32px; width:32px;"/>
+            <amx:showPopupBehavior align="bottomCenter" decoration="anchor" alignId="clmenu" type="action" popupId="p1"/>
+          </amx:commandLink>
+          <amx:image id="bgRunImg" source="/images/reloading.gif" inlineStyle="margin-right:5px;" 
+            rendered="#{applicationScope.ampa_bgtask_running}"/>
+      </amx:panelGroupLayout>
+
+    </amx:facet>
+    <amx:panelStretchLayout id="psl1" scrollPolicy="scroll">
+      <amx:facet name="top">
+       <amx:panelFormLayout  id="pfl1" fieldHalign="start" labelWidth="25%" fieldWidth="75%" labelPosition="end"
+                            rows="#{deviceScope.hardware.screen.diagonalSize gt 6 ? '3' : ''}">
+                                             <amx:inputText value="#{bindings.id.inputValue}" label="#{bindings.id.hints.label}" readOnly="false"                        id="it1"
+                                                            rendered="false" required="true" showRequired="true">
+                  </amx:inputText>
+                                                     <amx:inputText value="#{bindings.orderId.inputValue}" label="#{bindings.orderId.hints.label}" readOnly="false"                        id="it2"
+                                                                    rendered="false" required="true"
+                                                                    showRequired="true">
+                  </amx:inputText>
+          <amx:inputDate value="#{bindings.dat.inputValue}" label="#{viewBundle.DATE_LABEL}" readOnly="false"
+                         id="it3" required="true" showRequired="true">
+                  </amx:inputDate>
+          <amx:selectOneChoice value="#{bindings.kassaId.inputValue}" label="#{viewBundle.KASSA_LABEL}" id="soc3"
+                               required="true" showRequired="true">
+            <amx:selectItem label="#{viewBundle.SELECTION_REQUIRED}" id="si5"/>
+            <amx:selectItems value="#{bindings.kassaId.items}" id="si2"/>
+          </amx:selectOneChoice>
+          <amx:inputText value="#{bindings.sum1.inputValue}"
+                                                                    label="#{viewBundle.SUMMA_LABEL}" readOnly="false"  inputType="number"                        id="it4"
+                         required="true" showRequired="true">
+                    <amx:convertNumber groupingUsed="false" id="cn4"/>
+                  </amx:inputText>
+          <amx:selectOneChoice value="#{bindings.userId.inputValue}" label="#{viewBundle.MANAGER_LABEL}" id="soc1"
+                               readOnly="true" required="true" showRequired="true">
+            <amx:selectItems value="#{bindings.userId.items}" id="si1"/>
+          </amx:selectOneChoice>
+          <amx:selectOneChoice value="#{bindings.zamerId.inputValue}" label="#{viewBundle.MEASURER_LABEL}" id="soc2"
+                               required="true" showRequired="true">
+            <amx:selectItem label="#{viewBundle.SELECTION_REQUIRED}" id="si4"/>
+            <amx:selectItems value="#{bindings.zamerId.items}" id="si3"/>
+          </amx:selectOneChoice>
+          <amx:inputText value="#{bindings.comments.inputValue}" label="#{viewBundle.DESCRIPTION_LABEL}" readOnly="false"                        id="it6">
+                  </amx:inputText>
+        </amx:panelFormLayout>
+      </amx:facet>
+      <amx:facet name="center">
+            </amx:facet>
+    </amx:panelStretchLayout>
+  </amx:panelPage>
+  <amx:popup id="p1" animation="slideDown" autoDismiss="true" inlineStyle="width:50%;">
+    <amx:panelGroupLayout id="pglpu" layout="vertical">
+      <amx:spacer height="10" id="ms1"/>
+
+              <amx:commandLink actionListener="#{bindings.DeleteOplaty.execute}" text="Delete" action="__back" id="mendel"/>
+        <amx:spacer height="20" id="msDel"/>
+      
+      
+      
+            <amx:commandLink id="menSync" disabled="#{!bindings.hasOrdersDataSynchActions.inputValue or deviceScope.hardware.networkStatus=='NotReachable' or deviceScope.hardware.networkStatus=='unknown'}" 
+       actionListener="#{bindings.synchronizeOrders.execute}" text="Synchronize">
+        <amx:closePopupBehavior id="mencSync" popupId="p1" type="action"/>                                                 
+      </amx:commandLink>
+      <amx:spacer height="20" id="ms3"/>
+            <amx:commandLink id="menPsa" disabled="#{!bindings.hasOrdersDataSynchActions.inputValue}" text="Pending Sync Actions"
+                         actionListener="#{GoToFeature.goToDataSynchFeature}">
+        <amx:setPropertyListener id="menspaspl" from="ua.divas.mobile.model.Orders"
+                                 to="#{applicationScope.dataSynchEntity}"/>
+        <amx:closePopupBehavior id="mencPsa" popupId="p1" type="action"/>                         
+      </amx:commandLink>
+      <amx:spacer height="10" id="ms4"/>
+
+    </amx:panelGroupLayout>
+  </amx:popup>
+</amx:view>

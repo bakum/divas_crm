@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.23.11" id="ordersView1"
+          Package="DivasService.Types.updateOrdersView1" BeanClass="DivasService.Types.updateOrdersView1.ordersView1"
+          isJavaBased="false">
+  <Attribute Name="Id" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Dat" IsNotNull="false" Type="java.sql.Date">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Num" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="KontragId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="KontragName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="CurrId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="KassaId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DivisionId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DivisionName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="UserId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="UserName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Kurs" IsNotNull="false" Type="java.math.BigDecimal">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Kratnost" IsNotNull="false" Type="java.lang.Long">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Discription" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Deleted" IsNotNull="false" Type="java.lang.Integer">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Version" IsNotNull="false" Type="java.sql.Date">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="Posted" IsNotNull="false" Type="java.lang.Integer">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="FirmId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ActivitiesId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="StatusId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="StatusName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ZamerId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ZamerName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ZamerUserName" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="ZamerUserId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DatZam" IsNotNull="false" Type="java.sql.Date">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="TimeZam" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="SummPlan" IsNotNull="false" Type="java.math.BigDecimal">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DatComplete" IsNotNull="false" Type="java.sql.Date">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="AgentId" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DatCompleteFact" IsNotNull="false" Type="java.sql.Date">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="DivisionDest" IsNotNull="false" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="PrimaryKey" Value="false"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="OrdersTpOplatyView" IsCollection="true"
+                     BeanClass="DivasService.Types.updateOrdersView1.ordersView1.OrdersTpOplatyView"
+                     CollectionBeanClass="DivasService.Types.updateOrdersView1.ordersView1_Operations"/>
+  <AccessorAttribute id="OrdersTpUslugiView" IsCollection="true"
+                     BeanClass="DivasService.Types.updateOrdersView1.ordersView1.OrdersTpUslugiView"
+                     CollectionBeanClass="DivasService.Types.updateOrdersView1.ordersView1_Operations"/>
+  <AccessorAttribute id="PkoView" IsCollection="true"
+                     BeanClass="DivasService.Types.updateOrdersView1.ordersView1.PkoView"
+                     CollectionBeanClass="DivasService.Types.updateOrdersView1.ordersView1_Operations"/>
+  <AccessorAttribute id="RkoView" IsCollection="true"
+                     BeanClass="DivasService.Types.updateOrdersView1.ordersView1.RkoView"
+                     CollectionBeanClass="DivasService.Types.updateOrdersView1.ordersView1_Operations"/>
+</JavaBean>

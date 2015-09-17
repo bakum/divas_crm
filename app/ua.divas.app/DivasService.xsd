@@ -1,0 +1,930 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema elementFormDefault="qualified" targetNamespace="/ua/divas/service/app/common/types/" xmlns:ns0="/ua/divas/service/vo/common/" xmlns:ns1="http://xmlns.oracle.com/adf/svc/types/" xmlns:tns="/ua/divas/service/app/common/types/" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="PkoViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="DivisionSotrViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="LastPricesViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="FirmsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="KassaViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OrdersTpUslugiViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="NomenklaturaViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="MeasureUnitViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="UserSettingsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OrdersViewSDO.xsd"/>
+  <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="NomGroupSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OrdersTpOplatyViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OperationRkoViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="RkoViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="KontragentsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="DivisionsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="CurrencyViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="UsersViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="GroupmembersViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OrderStatusViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="KassaSettingsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="ContactDetailsViewSDO.xsd"/>
+  <import namespace="/ua/divas/service/vo/common/" schemaLocation="OperationPkoViewSDO.xsd"/>
+  <element name="getContactDetailsView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getContactDetailsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:ContactDetailsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateContactDetailsView1">
+    <complexType>
+      <sequence>
+        <element name="contactDetailsView1" type="ns0:ContactDetailsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateContactDetailsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:ContactDetailsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findContactDetailsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findContactDetailsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:ContactDetailsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getCurrencyView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getCurrencyView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:CurrencyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findCurrencyView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findCurrencyView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:CurrencyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getDivisionSotrView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getDivisionSotrView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:DivisionSotrViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findDivisionSotrView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findDivisionSotrView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:DivisionSotrViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getDivisionsView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getDivisionsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:DivisionsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findDivisionsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findDivisionsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:DivisionsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getFirmsView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getFirmsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:FirmsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findFirmsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findFirmsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:FirmsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKassaSettingsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKassaSettingsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:KassaSettingsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getKassaView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getKassaView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:KassaViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKassaView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKassaView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:KassaViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateKontragentsView1">
+    <complexType>
+      <sequence>
+        <element name="kontragentsView1" type="ns0:KontragentsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateKontragentsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:KontragentsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKontragentsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findKontragentsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:KontragentsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getLastPricesView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getLastPricesView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:LastPricesViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findLastPricesView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findLastPricesView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:LastPricesViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getMeasureUnitView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getMeasureUnitView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:MeasureUnitViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findMeasureUnitView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findMeasureUnitView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MeasureUnitViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOperationPkoView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOperationPkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OperationPkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOperationPkoView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOperationPkoView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OperationPkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOperationRkoView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOperationRkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OperationRkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOperationRkoView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOperationRkoView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OperationRkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrderStatusView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrderStatusView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OrderStatusViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpOplatyView1" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpOplatyView1" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpOplatyView1" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="mergeOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpOplatyView1" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergeOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersTpOplatyView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersTpOplatyView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OrdersTpOplatyViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpUslugiView1" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpUslugiView1" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpUslugiView1" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="mergeOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="ordersTpUslugiView1" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergeOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersTpUslugiView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersTpUslugiView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OrdersTpUslugiViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersView1">
+    <complexType>
+      <sequence>
+        <element name="ordersView1" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateOrdersView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergeOrdersView1">
+    <complexType>
+      <sequence>
+        <element name="ordersView1" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergeOrdersView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findOrdersView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getPkoView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getPkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createPkoView1">
+    <complexType>
+      <sequence>
+        <element name="pkoView1" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createPkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updatePkoView1">
+    <complexType>
+      <sequence>
+        <element name="pkoView1" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updatePkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deletePkoView1">
+    <complexType>
+      <sequence>
+        <element name="pkoView1" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deletePkoView1Response">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="mergePkoView1">
+    <complexType>
+      <sequence>
+        <element name="pkoView1" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergePkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findPkoView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findPkoView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:PkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getRkoView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getRkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createRkoView1">
+    <complexType>
+      <sequence>
+        <element name="rkoView1" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createRkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateRkoView1">
+    <complexType>
+      <sequence>
+        <element name="rkoView1" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="updateRkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteRkoView1">
+    <complexType>
+      <sequence>
+        <element name="rkoView1" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="deleteRkoView1Response">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="mergeRkoView1">
+    <complexType>
+      <sequence>
+        <element name="rkoView1" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="mergeRkoView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findRkoView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findRkoView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:RkoViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getUserSettingsView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getUserSettingsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:UserSettingsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findUserSettingsView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findUserSettingsView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:UserSettingsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findUsersView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findUsersView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:UsersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findGroupmembersView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findGroupmembersView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:GroupmembersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getKassaSettingsView1">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="getKassaSettingsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:KassaSettingsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findNomenklaturaView1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findNomenklaturaView1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:NomenklaturaViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrderStatusView1">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="getOrderStatusView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrderStatusViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findNomGroup1">
+    <complexType>
+      <sequence>
+        <element name="findCriteria" type="ns1:FindCriteria"/>
+        <element name="findControl" type="ns1:FindControl"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="findNomGroup1Response">
+    <complexType>
+      <sequence>
+        <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:NomGroupSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getKontragentsView1">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="getKontragentsView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:KontragentsViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersView1">
+    <complexType>
+      <sequence>
+        <element name="id" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getOrdersView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersView1">
+    <complexType>
+      <sequence>
+        <element name="ordersView1" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="createOrdersView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:OrdersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="getUsersView1">
+    <complexType>
+      <sequence/>
+    </complexType>
+  </element>
+  <element name="getUsersView1Response">
+    <complexType>
+      <sequence>
+        <element name="result" type="ns0:UsersViewSDO"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>

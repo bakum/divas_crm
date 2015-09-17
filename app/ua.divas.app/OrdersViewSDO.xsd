@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/ua/divas/service/vo/common/" xmlns:sdoJava="commonj.sdo/java" sdoJava:package="ua.divas.service.vo.common" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:sdoXML="commonj.sdo/xml" xmlns="/ua/divas/service/vo/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+  <xsd:include schemaLocation="OrdersTpOplatyViewSDO.xsd"/>
+  <xsd:include schemaLocation="OrdersTpUslugiViewSDO.xsd"/>
+  <xsd:include schemaLocation="PkoViewSDO.xsd"/>
+  <xsd:include schemaLocation="RkoViewSDO.xsd"/>
+  <xsd:complexType name="OrdersViewSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/"/>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Dat" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="Num" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="KontragId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="KontragName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="CurrId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="KassaId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DivisionId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DivisionName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="UserId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="UserName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Kurs" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="Kratnost" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+      <xsd:element minOccurs="0" name="Discription" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Deleted" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="Version" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="Posted" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+      <xsd:element minOccurs="0" name="FirmId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ActivitiesId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="StatusId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="StatusName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ZamerId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ZamerName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ZamerUserName" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="ZamerUserId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DatZam" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="TimeZam" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="SummPlan" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="DatComplete" nillable="true" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="AgentId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DatCompleteFact" nillable="true" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="DivisionDest" nillable="true" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersTpOplatyView" type="OrdersTpOplatyViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrdersTpUslugiView" type="OrdersTpUslugiViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="PkoView" type="PkoViewSDO"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="RkoView" type="RkoViewSDO"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ordersViewSDO" type="OrdersViewSDO"/>
+</xsd:schema>

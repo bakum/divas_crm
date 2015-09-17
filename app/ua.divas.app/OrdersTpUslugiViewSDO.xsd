@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="/ua/divas/service/vo/common/" xmlns:sdoJava="commonj.sdo/java" sdoJava:package="ua.divas.service.vo.common" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns="/ua/divas/service/vo/common/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+  <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+  <xsd:complexType name="OrdersTpUslugiViewSDO">
+    <xsd:annotation>
+      <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+        <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+          <attribute>Id</attribute>
+        </key>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="OrderId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="NomId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Price" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="Summ" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="DatComplete" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="SotrId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="DatToPay" nillable="true" type="ns0:dateTime-Timestamp"/>
+      <xsd:element minOccurs="0" name="GroupId" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="MeasureId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="Quantity" type="xsd:decimal"/>
+      <xsd:element minOccurs="0" name="AddWork" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="PriceAdd" nillable="true" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ordersTpUslugiViewSDO" type="OrdersTpUslugiViewSDO"/>
+</xsd:schema>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="OplatyPageDef"
+                Package="ua.divas.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="OrdersServiceIterator" Binds="root" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="ordersIterator" MasterBinding="OrdersServiceIterator" Binds="orders"
+                      BeanClass="ua.divas.mobile.model.Orders" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="oplatyIterator" MasterBinding="ordersIterator" Binds="oplaty"
+                      BeanClass="ua.divas.mobile.model.Oplaty" DataControl="OrdersService" RangeSize="25"/>
+    <iterator id="OplatyServiceIterator" Binds="root" DataControl="OplatyService" RangeSize="25"/>
+    <iterator Binds="root" RangeSize="25" DataControl="KontragentsService" id="KontragentsServiceIterator"/>
+    <accessorIterator id="kontragentsIterator" MasterBinding="KontragentsServiceIterator" Binds="kontragents"
+                      RangeSize="-1" DataControl="KontragentsService" BeanClass="ua.divas.mobile.model.Kontragents"/>
+    <iterator Binds="root" RangeSize="25" DataControl="UsersService" id="UsersServiceIterator"/>
+    <accessorIterator MasterBinding="UsersServiceIterator" Binds="users" RangeSize="-1" DataControl="UsersService"
+                      BeanClass="ua.divas.mobile.model.Users" id="usersIterator"/>
+    <accessorIterator id="userSettingsIterator" MasterBinding="usersIterator" Binds="userSettings" RangeSize="25"
+                      DataControl="UsersService" BeanClass="ua.divas.mobile.model.UserSettings"/>
+    <accessorIterator id="kassaSettingsIterator" MasterBinding="usersIterator" Binds="kassaSettings" RangeSize="-1"
+                      DataControl="UsersService" BeanClass="ua.divas.mobile.model.KassaSettings"/>
+  </executables>
+  <bindings>
+    <attributeValues id="hasOrdersDataSynchActions" IterBinding="OrdersServiceIterator">
+      <AttrNames>
+        <Item Value="hasOrdersDataSynchActions"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="isNewEntity" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="isNewEntity"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="saveOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="saveOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="entity" NDValue="#{bindings.ordersIterator.currentRow.dataProvider}"
+                 NDType="ua.divas.mobile.model.Orders"/>
+    </methodAction>
+    <attributeValues id="id" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="orderId" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="orderId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="dat" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="dat"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="sum1" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="sum1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="comments" IterBinding="oplatyIterator">
+      <AttrNames>
+        <Item Value="comments"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="DeleteOplaty" RequiresUpdateModel="false" Action="removeCurrentRow" IterBinding="oplatyIterator"/>
+    <methodAction id="synchronizeOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="synchronizeOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="inBackground" NDValue="true" NDType="java.lang.Boolean"/>
+    </methodAction>
+    <attributeValues id="hasOplatyDataSynchActions" IterBinding="OplatyServiceIterator">
+      <AttrNames>
+        <Item Value="hasOplatyDataSynchActions"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="saveOplaty" RequiresUpdateModel="true" Action="invokeMethod" MethodName="saveOplaty"
+                  DataControl="OplatyService" InstanceName="data.OplatyService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="entity" NDValue="#{bindings.oplatyIterator.currentRow.dataProvider}"
+                 NDType="ua.divas.mobile.model.Oplaty"/>
+    </methodAction>
+    <methodAction id="synchronizeOplaty" RequiresUpdateModel="true" Action="invokeMethod" MethodName="synchronizeOplaty"
+                  DataControl="OplatyService" InstanceName="data.OplatyService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="inBackground" NDValue="true" NDType="java.lang.Boolean"/>
+    </methodAction>
+    <list IterBinding="oplatyIterator" id="zamerId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="kontragentsIterator">
+      <AttrNames>
+        <Item Value="zamerId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="fullname"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="oplatyIterator" id="userId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="usersIterator">
+      <AttrNames>
+        <Item Value="userId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="login"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="oplatyIterator" id="kassaId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="kassaSettingsIterator">
+      <AttrNames>
+        <Item Value="kassaId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="kassaId"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="kassaName"/>
+      </ListDisplayAttrNames>
+    </list>
+  </bindings>
+</pageDefinition>

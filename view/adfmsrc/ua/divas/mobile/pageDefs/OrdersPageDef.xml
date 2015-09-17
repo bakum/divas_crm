@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.23.11" id="OrdersPageDef"
+                Package="ua.divas.mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="OrdersServiceIterator" Binds="root" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="ordersIterator" MasterBinding="OrdersServiceIterator" Binds="orders"
+                      BeanClass="ua.divas.mobile.model.Orders" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="oplatyIterator" MasterBinding="ordersIterator" Binds="oplaty"
+                      BeanClass="ua.divas.mobile.model.Oplaty" DataControl="OrdersService" RangeSize="25"/>
+    <accessorIterator id="uslugiIterator" MasterBinding="ordersIterator" Binds="uslugi"
+                      BeanClass="ua.divas.mobile.model.Uslugi" DataControl="OrdersService" RangeSize="25"/>
+    <iterator Binds="root" RangeSize="25" DataControl="KontragentsService" id="KontragentsServiceIterator"/>
+    <accessorIterator id="kontragentsIterator" MasterBinding="KontragentsServiceIterator" Binds="kontragents"
+                      RangeSize="-1" DataControl="KontragentsService" BeanClass="ua.divas.mobile.model.Kontragents"/>
+    <iterator Binds="root" RangeSize="25" DataControl="OrderStatusService" id="OrderStatusServiceIterator"/>
+    <accessorIterator id="orderStatusIterator" MasterBinding="OrderStatusServiceIterator" Binds="orderStatus"
+                      RangeSize="-1" DataControl="OrderStatusService" BeanClass="ua.divas.mobile.model.OrderStatus"/>
+    <iterator Binds="root" RangeSize="25" DataControl="UsersService" id="UsersServiceIterator"/>
+    <accessorIterator id="usersIterator" MasterBinding="UsersServiceIterator" Binds="users" RangeSize="-1"
+                      DataControl="UsersService" BeanClass="ua.divas.mobile.model.Users"/>
+  </executables>
+  <bindings>
+    <attributeValues id="hasOrdersDataSynchActions" IterBinding="OrdersServiceIterator">
+      <AttrNames>
+        <Item Value="hasOrdersDataSynchActions"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="isNewEntity" IterBinding="ordersIterator">
+      <AttrNames>
+        <Item Value="isNewEntity"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="saveOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="saveOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="entity" NDValue="#{bindings.ordersIterator.currentRow.dataProvider}"
+                 NDType="ua.divas.mobile.model.Orders"/>
+    </methodAction>
+    <attributeValues id="num" IterBinding="ordersIterator">
+      <AttrNames>
+        <Item Value="num"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="divisionName" IterBinding="ordersIterator">
+      <AttrNames>
+        <Item Value="divisionName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="discription" IterBinding="ordersIterator">
+      <AttrNames>
+        <Item Value="discription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues id="summPlan" IterBinding="ordersIterator">
+      <AttrNames>
+        <Item Value="summPlan"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="CreateOplaty" RequiresUpdateModel="true" Action="createRow" IterBinding="oplatyIterator"/>
+    <action id="CreateUslugi" RequiresUpdateModel="true" Action="createRow" IterBinding="uslugiIterator"/>
+    <methodAction id="synchronizeOrders" RequiresUpdateModel="true" Action="invokeMethod" MethodName="synchronizeOrders"
+                  DataControl="OrdersService" InstanceName="data.OrdersService.dataProvider" IsViewObjectMethod="false">
+      <NamedData NDName="inBackground" NDValue="true" NDType="java.lang.Boolean"/>
+    </methodAction>
+    <list IterBinding="ordersIterator" id="kontragId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="kontragentsIterator">
+      <AttrNames>
+        <Item Value="kontragId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="fullname"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="ordersIterator" id="zamerId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="kontragentsIterator">
+      <AttrNames>
+        <Item Value="zamerId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="fullname"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="ordersIterator" id="statusId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="orderStatusIterator">
+      <AttrNames>
+        <Item Value="statusId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="fullname"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="ordersIterator" id="userId" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="false" ListIter="usersIterator">
+      <AttrNames>
+        <Item Value="userId"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="id"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="login"/>
+      </ListDisplayAttrNames>
+    </list>
+    <attributeValues IterBinding="ordersIterator" id="dat">
+      <AttrNames>
+        <Item Value="dat"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ordersIterator" id="datZam">
+      <AttrNames>
+        <Item Value="datZam"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="oplatyIterator" id="oplaty">
+      <nodeDefinition DefName="ua.divas.mobile.model.Oplaty" Name="oplaty0">
+        <AttrNames>
+          <Item Value="dat"/>
+          <Item Value="sum1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="uslugiIterator" id="uslugi">
+      <nodeDefinition DefName="ua.divas.mobile.model.Uslugi" Name="uslugi0">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="summ"/>
+          <Item Value="datComplete"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

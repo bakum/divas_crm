@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+  <file source-language="ru" original="ua.divas.mobile.viewBundle" datatype="x-oracle-adf">
+    <body>
+       <trans-unit id="UAH">
+        <source>грн</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MEASURING">
+        <source>Замеры</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SERVICES">
+        <source>Работы</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PAYMENT">
+        <source>Оплаты</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SYNCHRONIZE">
+        <source>Синхронизировать</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PENDING_SYNC_ACTIONS">
+        <source>Отложенные синхронизации</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DELETE">
+        <source>Удалить</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="REFRESH">
+        <source>Обновить</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="ORDERS__">
+        <source>Заказ №</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="USLUGI_">
+        <source>Работы</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DATE_LABEL">
+        <source>Дата</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DATE_OF_MEASURE">
+        <source>Дата замера</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="STATUS_LABEL">
+        <source>Статус</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="KASSA_LABEL">
+        <source>Касса</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="CUSTOMER_LABEL">
+        <source>Клиент</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DESCRIPTION_LABEL">
+        <source>Примечание</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MEASURER_LABEL">
+        <source>Замерщик</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="MANAGER_LABEL">
+        <source>Менеджер</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="NUMBER_LABEL">
+        <source>Номер</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DIVISION_LABEL">
+        <source>Филиал</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PLAN_SUMM">
+        <source>План. сумма</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SELECTION_REQUIRED">
+        <source>Требуется выбор</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SEARCH">
+        <source>Поиск</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="SUMMA_LABEL">
+        <source>Сумма</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="DETAIL_LABEL">
+        <source>Основные сведения</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="PAYMENT_LABEL">
+        <source>Оплата</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
