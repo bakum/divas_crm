@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.23.11" id="updateOrdersTpOplatyView1"
-          Package="DivasService.Types" BeanClass="DivasService.Types.updateOrdersTpOplatyView1" isJavaBased="false">
-  <AccessorAttribute id="ordersTpOplatyView1" IsCollection="false"
-                     BeanClass="DivasService.Types.updateOrdersTpOplatyView1.ordersTpOplatyView1"/>
-</JavaBean>
